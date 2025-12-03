@@ -7,7 +7,7 @@ import TestimonialCarousel from "./components/ui/TestimonialCarousel";
 
 export default function Home() {
   return (
-    <div className="">
+    <div className="overflow-x-hidden">
       <HeroSection />
       <HomeAboutPage />
       <ServicesPage />
