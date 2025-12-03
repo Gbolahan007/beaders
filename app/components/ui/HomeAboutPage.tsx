@@ -36,13 +36,6 @@ const HomeAboutPage = () => {
           </span>
         </h1>
 
-        {/* Subtitle */}
-        <p className="text-xl md:text-2xl text-center text-gray-700 max-w-4xl mx-auto mb-20 font-light">
-          {/* Solid accent color for the highlight */}
-          We are building the digital infrastructure to empower the continents
-          bead economy.
-        </p>
-
         {/* Feature Cards */}
         <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
           {[

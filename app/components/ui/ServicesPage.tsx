@@ -19,7 +19,7 @@ const services = [
     description:
       "Discover curated collections of exquisite finished beaded jewelry from talented artisans. Browse unique pieces, limited editions, and seasonal collections.",
     icon: ShoppingBag,
-    image: "/beader-market.jpg",
+    image: "/beads-market.jpeg",
   },
   {
     id: 2,
@@ -28,7 +28,7 @@ const services = [
     description:
       "Premium quality beads, findings, and tools for every project. From seed beads to gemstones, get everything you need for your creative vision.",
     icon: ShoppingBag,
-    image: "/beads-1.jpeg",
+    image: "/beads-tools.jpeg",
   },
   {
     id: 3,
@@ -46,7 +46,7 @@ const services = [
     description:
       "Personalized beading services for custom creations and restoration. Transform your garments with intricate beadwork or restore your treasured pieces.",
     icon: Palette,
-    image: "/beads-3.jpeg",
+    image: "/beads-custom.jpeg",
   },
   {
     id: 5,
@@ -55,7 +55,7 @@ const services = [
     description:
       "Give your old beaded pieces new life. Trade in, upgrade, or refurbish your collection. Sustainable luxury for conscious collectors.",
     icon: RefreshCw,
-    image: "/beads-8.jpeg",
+    image: "/beads-repair.jpeg",
   },
 ];
 

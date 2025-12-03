@@ -42,7 +42,7 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 w-full max-w-6xl mx-auto px-5 sm:px-10 text-center pb-16 sm:pb-28">
         {/* Badge */}
-        <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/30 rounded-full px-4 py-1.5 text-xs sm:text-sm text-white font-medium shadow-xl">
+        <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/30 rounded-full px-4 py-1.5 text-lgs sm:text-sm text-white font-medium shadow-xl">
           <Sparkles style={{ color: ACCENT_COLOR }} className="w-4 h-4" />
           <span>The Premier Global Bead Marketplace</span>
         </div>
