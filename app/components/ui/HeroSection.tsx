@@ -47,7 +47,7 @@ const HeroSection = () => {
           <span>The Premier Global Bead Marketplace</span>
         </div>
 
-        <h1 className="mt-5 text-4xl sm:text-6xl  font-extrabold text-white leading-tight sm:leading-none">
+        <h1 className="mt-5 text-2xl sm:text-6xl  font-extrabold text-white leading-tight sm:leading-none">
           Your Beading Marketplace Reimagined.
           <span
             className={`${Playwrite.className}  block mt-2 sm:mt-3 text-xl sm:text-2xl font-black`}
