@@ -150,9 +150,15 @@ export default function HomeServices() {
             <div
               key={plan.id}
               onClick={() => setSelectedPlan(plan.id)}
-              className={`relative bg-white rounded-2xl shadow-xl hover:shadow-xl transition-all duration-300 overflow-hidden cursor-pointer ${
-                selectedPlan === plan.id ? "scale-110" : "hover:scale-105"
-              }`}
+              // --- START: Mobile responsiveness fix for scaling ---
+              className={`relative bg-white rounded-2xl shadow-xl hover:shadow-xl transition-all duration-300 overflow-hidden cursor-pointer 
+                ${
+                  selectedPlan === plan.id
+                    ? "scale-105 lg:scale-110"
+                    : "hover:scale-[1.02] lg:hover:scale-105"
+                }
+              `}
+              // --- END: Mobile responsiveness fix for scaling ---
               style={
                 selectedPlan === plan.id
                   ? {
