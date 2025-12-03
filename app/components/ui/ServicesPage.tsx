@@ -68,7 +68,7 @@ export function ServicesPage() {
       <section className="relative px-6 py-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center space-y-6 mb-20">
-            <h1 className="text-5xl md:text-6xl font-bold text-black text-balance">
+            <h1 className="text-2xl md:text-5xl font-bold text-[#636b2f] text-balance">
               Artisanal Beading at Its Finest
             </h1>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">

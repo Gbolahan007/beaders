@@ -22,16 +22,17 @@ const HomeAboutPage = () => {
 
         {/* Main Heading */}
         <h1
-          className="text-5xl md:text-7xl font-extrabold text-center mb-6 leading-tight"
+          className="text-xl md:text-2xl font-extrabold text-center mb-6 leading-tight"
           style={{ color: PRIMARY_COLOR }}
         >
-          A Unified Ecosystem for
+          To digitize Africa’s bead economy by connecting creators and buyers,
           <br />
           <span
             className="text-transparent bg-clip-text"
             style={{ color: ACCENT_COLOR }}
           >
-            African Creativity
+            enabling skills development, and building sustainable income
+            opportunities.
           </span>
         </h1>
 

@@ -1,52 +1,67 @@
 import { Sparkles } from "lucide-react";
+import { Playwrite_NO } from "next/font/google";
 import Image from "next/image";
 
-const ACCENT_COLOR = "#d9b753";
+const PRIMARY_COLOR = "#636b2f"; // Main brand color
+const ACCENT_COLOR = "#d9b753"; // Secondary brand color
+
+const Playwrite = Playwrite_NO({
+  weight: ["300", "400"], // choose weights you want
+});
 
 const HeroSection = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen md:min-h-0 md:h-[700px] lg:max-h-screen flex flex-col justify-center items-center overflow-hidden"
+      className="relative min-h-screen md:min-h-0 md:h-[750px] flex flex-col justify-center items-center overflow-hidden"
     >
       {/* Background */}
       <div className="absolute inset-0 -z-10">
+        {/* Mobile Image */}
         <Image
-          src="/hero.jpg"
-          alt="Hero background"
+          src="/hero-3-mobile.webp"
+          alt="Hero background mobile"
           fill
           priority
-          className="object-cover object-center"
+          className="object-cover block md:hidden"
+        />
+
+        {/* Desktop Image */}
+        <Image
+          src="/hero-3.webp"
+          alt="Hero background desktop"
+          fill
+          priority
+          className="object-cover object-center hidden md:block"
         />
 
         {/* Dark overlay */}
         <div className="absolute inset-0 bg-black/60" />
       </div>
+
       {/* Content */}
-      <div className="relative z-10 w-full max-w-6xl mx-auto px-6 sm:px-10 text-center pt-28 pb-20 sm:pb-32">
+      <div className="relative z-10 w-full max-w-6xl mx-auto px-5 sm:px-10 text-center pb-16 sm:pb-28">
         {/* Badge */}
-        <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 text-sm mt-6 text-white shadow-lg animate-fadeIn">
+        <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/30 rounded-full px-4 py-1.5 text-xs sm:text-sm text-white font-medium shadow-xl">
           <Sparkles style={{ color: ACCENT_COLOR }} className="w-4 h-4" />
-          <span>Africa&apos;s Premier Bead Marketplace</span>
+          <span>The Premier Global Bead Marketplace</span>
         </div>
 
-        {/* Heading */}
-        <h1 className="mt-5 text-4xl sm:text-5xl lg:text-x6l xl:text-7xl font-black text-white leading-tight animate-fadeInSlow">
-          Discover the Art of
-          <span className="block mt-1" style={{ color: ACCENT_COLOR }}>
-            African Beadwork
+        <h1 className="mt-5 text-4xl sm:text-6xl  font-extrabold text-white leading-tight sm:leading-none">
+          Your Beading Marketplace Reimagined.
+          <span
+            className={`${Playwrite.className}  block mt-2 sm:mt-3 text-xl sm:text-2xl font-black`}
+            style={{ color: ACCENT_COLOR }}
+          >
+            Built for Makers. Designed for Buyers. Powered by Community.
           </span>
         </h1>
 
-        {/* Subtitle */}
-        <p className="mt-4 max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-gray-200 font-light animate-fadeInSlow">
-          Your one-stop marketplace to explore, buy, and celebrate authentic
-          bead materials and craftsmanship.
-        </p>
-
-        {/* CTA Buttons */}
-        <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center animate-fadeInSlow">
-          <button className="bg-white/10 cursor-pointer border border-white/30 text-white px-10 py-4 rounded-xl font-semibold text-lg transition-all duration-300 hover:bg-white/20 hover:scale-105 w-full sm:w-auto">
+        <div className="mt-20 flex flex-col sm:flex-row gap-5 justify-center">
+          <button
+            style={{ backgroundColor: PRIMARY_COLOR }}
+            className="cursor-pointer text-white px-10 py-4 rounded-xl font-bold text-lg sm:text-xl transition-all duration-300 hover:opacity-90 hover:scale-[1.02] w-full sm:w-auto min-w-[200px] shadow-lg"
+          >
             Join Waitlist
           </button>
         </div>

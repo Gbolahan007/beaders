@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Inter } from "next/font/google";
-import "./globals.css";
-import Header from "./components/ui/Header";
+import { Geist, Geist_Mono, Oswald } from "next/font/google";
 import Footer from "./components/ui/Footer";
+import Header from "./components/ui/Header";
+import "./globals.css";
 
-const lato = Inter({
-  weight: ["300", "400", "700", "900"], // choose weights you want
+const lato = Oswald({
+  weight: ["300", "400", "700"], // choose weights you want
   subsets: ["latin"],
 });
 

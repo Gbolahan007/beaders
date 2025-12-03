@@ -150,7 +150,6 @@ export default function HomeServices() {
             <div
               key={plan.id}
               onClick={() => setSelectedPlan(plan.id)}
-              // --- START: Mobile responsiveness fix for scaling ---
               className={`relative bg-white rounded-2xl shadow-xl hover:shadow-xl transition-all duration-300 overflow-hidden cursor-pointer 
                 ${
                   selectedPlan === plan.id
