@@ -1,4 +1,3 @@
-import { Sparkles } from "lucide-react";
 import { Playwrite_NO } from "next/font/google";
 import Image from "next/image";
 

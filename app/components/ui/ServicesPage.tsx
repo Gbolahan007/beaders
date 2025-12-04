@@ -1,15 +1,14 @@
 "use client";
 
-import { useState } from "react";
 import {
   ArrowRight,
-  Sparkles,
-  ShoppingBag,
   BookOpen,
   Palette,
   RefreshCw,
+  ShoppingBag,
 } from "lucide-react";
 import Image from "next/image";
+import { useState } from "react";
 
 const services = [
   {
