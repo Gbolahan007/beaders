@@ -8,7 +8,11 @@ import {
   ShoppingBag,
 } from "lucide-react";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const services = [
   {
@@ -60,6 +64,31 @@ const services = [
 
 export function ServicesPage() {
   const [hoveredId, setHoveredId] = useState<number | null>(null);
+  const cardsRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (cardsRef.current) {
+      const cards = Array.from(cardsRef.current.children) as HTMLElement[];
+
+      gsap.fromTo(
+        cards,
+        { opacity: 0, y: 50, scale: 0.95 },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 0.8,
+          stagger: 0.15,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: cardsRef.current,
+            start: "top 85%",
+            toggleActions: "play none none none",
+          },
+        }
+      );
+    }
+  }, []);
 
   return (
     <main className="min-h-screen bg-white">
@@ -77,7 +106,10 @@ export function ServicesPage() {
           </div>
 
           {/* Services Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div
+            ref={cardsRef}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          >
             {services.map((service) => {
               const Icon = service.icon;
               const isHovered = hoveredId === service.id;
@@ -103,8 +135,9 @@ export function ServicesPage() {
                       }`}
                     />
 
+                    {/* Overlay on hover */}
                     <div
-                      className={`absolute inset-0 bg-linear-to-t from-[#636b2f]/20 to-transparent opacity-0 transition-opacity duration-300 ${
+                      className={`absolute inset-0 bg-gradient-to-t from-[#636b2f]/20 to-transparent opacity-0 transition-opacity duration-300 ${
                         isHovered ? "opacity-100" : ""
                       }`}
                     />
@@ -137,9 +170,7 @@ export function ServicesPage() {
                     </p>
 
                     <button
-                      className={`w-full mt-4 py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center gap-2 font-medium text-white ${
-                        isHovered ? "hover:opacity-90" : "hover:opacity-80"
-                      }`}
+                      className={`w-full mt-4 py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center gap-2 font-medium text-white hover:opacity-90`}
                       style={{
                         backgroundColor: isHovered ? "#636b2f" : "#d9b753",
                         color: isHovered ? "#ffffff" : "#1a1a1a",
@@ -159,8 +190,6 @@ export function ServicesPage() {
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
     </main>
   );
 }

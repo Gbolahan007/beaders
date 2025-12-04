@@ -1,31 +1,104 @@
 "use client";
 
-import { useState } from "react";
 import { ChevronRight, Sparkles } from "lucide-react";
+import { useState, useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function JoinMovementHero() {
   const PRIMARY_COLOR = "#636b2f";
   const ACCENT_COLOR = "#d9b753";
   const [isHovered, setIsHovered] = useState(false);
 
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const badgeRef = useRef<HTMLDivElement>(null);
+  const headingRef = useRef<HTMLHeadingElement>(null);
+  const subtitleRef = useRef<HTMLParagraphElement>(null);
+  const buttonsRef = useRef<HTMLDivElement>(null);
+  const blob1Ref = useRef<HTMLDivElement>(null);
+  const blob2Ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!sectionRef.current) return;
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: "top 80%",
+        toggleActions: "play none none none",
+      },
+    });
+
+    tl.from(badgeRef.current, {
+      opacity: 0,
+      y: 30,
+      duration: 0.8,
+      ease: "power3.out",
+    })
+      .from(
+        headingRef.current,
+        { opacity: 0, y: 30, duration: 0.8, ease: "power3.out" },
+        "+=0.2"
+      )
+      .from(
+        subtitleRef.current,
+        { opacity: 0, y: 30, duration: 0.8, ease: "power3.out" },
+        "+=0.2"
+      )
+      .from(
+        buttonsRef.current,
+        { opacity: 0, y: 30, duration: 0.8, ease: "power3.out" },
+        "+=0.2"
+      );
+
+    // Continuous subtle float animation for blobs
+    if (blob1Ref.current) {
+      gsap.to(blob1Ref.current, {
+        y: "-=20",
+        repeat: -1,
+        yoyo: true,
+        duration: 3,
+        ease: "sine.inOut",
+      });
+    }
+    if (blob2Ref.current) {
+      gsap.to(blob2Ref.current, {
+        y: "+=20",
+        repeat: -1,
+        yoyo: true,
+        duration: 4,
+        ease: "sine.inOut",
+      });
+    }
+  }, []);
+
   return (
-    <section className="relative min-h-screen bg-black overflow-hidden flex items-center justify-center">
+    <section
+      ref={sectionRef}
+      className="relative bg-black overflow-hidden flex items-center justify-center py-10 sm:py-12"
+    >
+      {/* Background Blobs */}
       <div className="absolute inset-0 opacity-20">
         <div
-          className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full blur-3xl animate-pulse"
+          ref={blob1Ref}
+          className="absolute top-1/4 left-1/4 w-72 h-72 rounded-full blur-3xl"
           style={{ backgroundColor: ACCENT_COLOR }}
         />
         <div
-          className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full blur-3xl animate-pulse"
-          style={{ backgroundColor: PRIMARY_COLOR, animationDelay: "1s" }}
+          ref={blob2Ref}
+          className="absolute bottom-1/4 right-1/4 w-72 h-72 rounded-full blur-3xl"
+          style={{ backgroundColor: PRIMARY_COLOR }}
         />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-12 sm:py-20">
+      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Badge */}
         <div
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold mb-8 transition-all duration-300"
+          ref={badgeRef}
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold mb-8"
           style={{
             backgroundColor: `${ACCENT_COLOR}15`,
             color: ACCENT_COLOR,
@@ -37,10 +110,13 @@ export default function JoinMovementHero() {
         </div>
 
         {/* Main Heading */}
-        <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight tracking-tight">
+        <h1
+          ref={headingRef}
+          className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight tracking-tight"
+        >
           Join the
           <span
-            className="block mt-2 bg-linear-to-r from-yellow-400 via-yellow-300 to-amber-300 bg-clip-text text-transparent"
+            className="block mt-2 bg-clip-text text-transparent"
             style={{
               backgroundImage: `linear-gradient(to right, ${ACCENT_COLOR}, #ffd700, ${ACCENT_COLOR})`,
             }}
@@ -50,16 +126,22 @@ export default function JoinMovementHero() {
         </h1>
 
         {/* Subtitle */}
-        <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto mb-12 leading-relaxed">
+        <p
+          ref={subtitleRef}
+          className="text-base sm:text-lg text-gray-300 max-w-2xl mx-auto mb-12 leading-relaxed"
+        >
           Be part of the first 1,000 members to access exclusive drops and early
           features.
-          <span className="block mt-2 text-base">
+          <span className="block mt-2 text-sm sm:text-base">
             The revolution is handmade.
           </span>
         </p>
 
-        {/* CTA Button */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        {/* CTA Buttons */}
+        <div
+          ref={buttonsRef}
+          className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+        >
           <button
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
@@ -78,12 +160,10 @@ export default function JoinMovementHero() {
               />
             </span>
             <div
-              className={`absolute inset-0 transition-all duration-300 ${
-                isHovered ? "opacity-100" : "opacity-0"
-              }`}
+              className={`absolute inset-0 transition-all duration-300`}
               style={{
                 background: `linear-gradient(to right, transparent, rgba(255,255,255,0.3), transparent)`,
-                transform: isHovered ? "translateX(0)" : "translateX(-100%)",
+                opacity: isHovered ? 1 : 0,
               }}
             />
           </button>
@@ -98,34 +178,7 @@ export default function JoinMovementHero() {
             Learn More
           </button>
         </div>
-
-        {/* Trust Indicators */}
-        {/* <div className="mt-16 pt-12 border-t border-gray-800">
-          <p className="text-sm text-gray-400 mb-6">
-            TRUSTED BY ARTISANS WORLDWIDE
-          </p>
-          <div className="flex justify-center items-center gap-8 flex-wrap">
-            <div className="text-center">
-              <p className="text-3xl font-bold text-white">500+</p>
-              <p className="text-sm text-gray-400">Active Members</p>
-            </div>
-            <div className="w-px h-12 bg-gray-700 hidden sm:block" />
-            <div className="text-center">
-              <p className="text-3xl font-bold text-white">10K+</p>
-              <p className="text-sm text-gray-400">Beads Used</p>
-            </div>
-            <div className="w-px h-12 bg-gray-700 hidden sm:block" />
-            <div className="text-center">
-              <p className="text-3xl font-bold text-white">48H</p>
-              <p className="text-sm text-gray-400">Delivery Worldwide</p>
-            </div>
-          </div>
-        </div> */}
       </div>
-
-      {/* Decorative Elements */}
-      <div className="absolute bottom-8 left-8 w-16 h-16 border border-gray-800 rounded-lg opacity-30 animate-float" />
-      <div className="absolute top-1/4 right-12 w-12 h-12 border border-gray-800 rounded-full opacity-20 animate-bounce" />
     </section>
   );
 }
