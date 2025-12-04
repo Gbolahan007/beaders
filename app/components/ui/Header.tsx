@@ -20,22 +20,16 @@ const Header = () => {
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             {/* Logo Section */}
-            <Link
-              href="#home"
-              className="flex items-center space-x-3 group"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              <div className="w-10 h-10 relative">
+            <Link href="#home" onClick={() => setIsMenuOpen(false)}>
+              <div className="w-36 h-36 relative">
+                {" "}
                 <Image
-                  src="/logo.jpg"
+                  src="/logo-2.png"
                   alt="Beaders Logo"
                   fill
                   className="object-contain"
                 />
               </div>
-              <span className="text-3xl font-extrabold text-white tracking-tight">
-                Beaders
-              </span>
             </Link>
 
             {/* Desktop Navigation */}

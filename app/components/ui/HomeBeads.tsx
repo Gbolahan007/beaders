@@ -35,7 +35,7 @@ export default function HomeBeads() {
       {/* Header */}
       <div className="py-16 px-4">
         <h1 className="text-center text-5xl md:text-6xl font-bold text-slate-800">
-          Built of You
+          Built For You
         </h1>
       </div>
 
