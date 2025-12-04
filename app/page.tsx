@@ -1,6 +1,8 @@
+import FeaturesGrid from "./components/ui/FeaturesGrid";
 import HeroSection from "./components/ui/HeroSection";
 import HomeAboutPage from "./components/ui/HomeAboutPage";
-import HomeServices from "./components/ui/HomeServices";
+import HomeBeads from "./components/ui/HomeBeads";
+import ImpactStats from "./components/ui/ImpactStats";
 import JoinMovementHero from "./components/ui/JoinMovementHero";
 import { ServicesPage } from "./components/ui/ServicesPage";
 import TestimonialCarousel from "./components/ui/TestimonialCarousel";
@@ -11,8 +13,10 @@ export default function Home() {
       <HeroSection />
       <HomeAboutPage />
       <ServicesPage />
-      <HomeServices />
+      <HomeBeads />
+      <ImpactStats />
       <JoinMovementHero />
+      <FeaturesGrid />
       <TestimonialCarousel />
     </div>
   );

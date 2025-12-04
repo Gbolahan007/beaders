@@ -42,13 +42,13 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 w-full max-w-6xl mx-auto px-5 sm:px-10 text-center pb-16 sm:pb-28">
         {/* Badge */}
-        <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/30 rounded-full px-4 py-1.5 text-lgs sm:text-sm text-white font-medium shadow-xl">
+        {/* <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/30 rounded-full px-4 py-1.5 text-lgs sm:text-sm text-white font-medium shadow-xl">
           <Sparkles style={{ color: ACCENT_COLOR }} className="w-4 h-4" />
           <span>The Premier Global Bead Marketplace</span>
-        </div>
+        </div> */}
 
-        <h1 className="mt-5 text-2xl sm:text-6xl  font-extrabold text-white leading-tight sm:leading-none">
-          Your Beading Marketplace Reimagined.
+        <h1 className="mt-5 text-4xl sm:text-6xl  font-extrabold text-white leading-tight sm:leading-none">
+          Africa’s First Bead Marketplace
           <span
             className={`${Playwrite.className}  block mt-2 sm:mt-3 text-xl sm:text-2xl font-black`}
             style={{ color: ACCENT_COLOR }}

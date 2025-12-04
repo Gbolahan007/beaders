@@ -69,7 +69,7 @@ export function ServicesPage() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center space-y-6 mb-20">
             <h1 className="text-2xl md:text-5xl font-bold text-[#636b2f] text-balance">
-              Artisanal Beading at Its Finest
+              Your Beading Marketplace Reimagined.
             </h1>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
               Explore our comprehensive ecosystem of beading services, from
@@ -162,45 +162,6 @@ export function ServicesPage() {
       </section>
 
       {/* CTA Section */}
-
-      {/* Features Section */}
-      <section className="px-6 py-12 md:py-20 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-black text-center mb-16 text-balance">
-            Why Choose Us
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Premium Quality",
-                description:
-                  "Sourced from the finest suppliers worldwide. Every bead, tool, and material meets our rigorous standards.",
-              },
-              {
-                title: "Expert Community",
-                description:
-                  "Learn from master artisans with decades of experience. Join workshops, courses, and exclusive events.",
-              },
-              {
-                title: "Sustainable Practices",
-                description:
-                  "Ethical sourcing and our trade-in program keep beading beautiful and responsible for future generations.",
-              },
-            ].map((feature, index) => (
-              <div key={index} className="space-y-3">
-                <Sparkles className="w-8 h-8" style={{ color: "#d9b753" }} />
-                <h3 className="text-lg font-semibold text-black">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  {feature.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
     </main>
   );
 }

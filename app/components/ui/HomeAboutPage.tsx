@@ -1,4 +1,4 @@
-import { Gem, ShoppingBag, Users } from "lucide-react";
+import { Gem, ShoppingBag, Sparkles, Users } from "lucide-react";
 
 const PRIMARY_COLOR = "#636b2f";
 const ACCENT_COLOR = "#d9b753";
@@ -37,7 +37,7 @@ const HomeAboutPage = () => {
         </h1>
 
         {/* Feature Cards */}
-        <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto mt-16">
           {[
             {
               icon: ShoppingBag,
@@ -87,6 +87,45 @@ const HomeAboutPage = () => {
           ))}
         </div>
       </div>
+
+      {/* Features Section */}
+      <section className="px-6 py-10 md:py-12 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#636b2f] text-center mb-16 text-balance">
+            Why It Matters
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Premium Quality",
+                description:
+                  "Sourced from the finest suppliers worldwide. Every bead, tool, and material meets our rigorous standards.",
+              },
+              {
+                title: "Expert Community",
+                description:
+                  "Learn from master artisans with decades of experience. Join workshops, courses, and exclusive events.",
+              },
+              {
+                title: "Sustainable Practices",
+                description:
+                  "Ethical sourcing and our trade-in program keep beading beautiful and responsible for future generations.",
+              },
+            ].map((feature, index) => (
+              <div key={index} className="space-y-3">
+                <Sparkles className="w-8 h-8" style={{ color: "#d9b753" }} />
+                <h3 className="text-lg font-semibold text-black">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  {feature.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
