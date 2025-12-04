@@ -36,7 +36,7 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="md:col-span-2">
             <div className="flex items-center mb-6">
-              <div className="relative w-20 h-20 rounded-lg border border-red-700">
+              <div className="relative w-20 h-20 rounded-lg">
                 <Image
                   src="/logo-1.png"
                   alt="Beaders Logo"
