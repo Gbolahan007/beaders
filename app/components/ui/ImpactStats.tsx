@@ -8,9 +8,8 @@ import {
   Heart,
 } from "lucide-react";
 
-// Define the brand colors based on your request
-const BRAND_COLOR = "#636b2f"; // Primary (Dark Olive)
-const SECONDARY_COLOR = "#d9b753"; // Secondary (Mustard/Gold)
+const BRAND_COLOR = "#636b2f";
+const SECONDARY_COLOR = "#d9b753";
 
 const statsData = [
   {
@@ -121,7 +120,7 @@ const ImpactStats = () => {
             </p>
             <p className="text-6xl font-extrabold">148</p>
             <p className="mt-1 text-lg opacity-90">
-              Active members in our thriving artisan network.
+              Active members in our fast-growing creative community
             </p>
           </div>
         </div>

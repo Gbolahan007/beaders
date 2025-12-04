@@ -16,8 +16,8 @@ export default function Home() {
       <HomeBeads />
       <ImpactStats />
       <JoinMovementHero />
-      <FeaturesGrid />
-      <TestimonialCarousel />
+      {/* <FeaturesGrid /> */}
+      {/* <TestimonialCarousel /> */}
     </div>
   );
 }

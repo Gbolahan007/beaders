@@ -89,40 +89,40 @@ const HomeAboutPage = () => {
       </div>
 
       {/* Features Section */}
-      <section className="px-6 py-10 md:py-12 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#636b2f] text-center mb-16 text-balance">
-            Why It Matters
-          </h2>
+      <section
+        style={{ backgroundColor: "#faf9f5" }}
+        className="px-6 py-14 md:py-20 bg-white"
+      >
+        <div className="max-w-5xl mx-auto text-center">
+          {/* Heading */}
+          <div className="inline-block mb-10">
+            <h2
+              className="text-3xl md:text-4xl font-extrabold text-center"
+              style={{ color: PRIMARY_COLOR }}
+            >
+              Why It Matters
+            </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Premium Quality",
-                description:
-                  "Sourced from the finest suppliers worldwide. Every bead, tool, and material meets our rigorous standards.",
-              },
-              {
-                title: "Expert Community",
-                description:
-                  "Learn from master artisans with decades of experience. Join workshops, courses, and exclusive events.",
-              },
-              {
-                title: "Sustainable Practices",
-                description:
-                  "Ethical sourcing and our trade-in program keep beading beautiful and responsible for future generations.",
-              },
-            ].map((feature, index) => (
-              <div key={index} className="space-y-3">
-                <Sparkles className="w-8 h-8" style={{ color: "#d9b753" }} />
-                <h3 className="text-lg font-semibold text-black">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  {feature.description}
-                </p>
-              </div>
-            ))}
+            {/* Accent underline */}
+            <div
+              className="h-1 w-20 mx-auto mt-3 rounded-full"
+              style={{ backgroundColor: ACCENT_COLOR }}
+            ></div>
+          </div>
+
+          {/* Text Content */}
+          <div className="space-y-6 max-w-3xl mx-auto text-gray-700 text-base md:text-lg leading-relaxed">
+            <p>
+              Beadwork isn&apos;t just an accessory; it&apos;s heritage,
+              economy, and expression. Yet, the market is fragmented. Creators
+              struggle to find buyers, and buyers struggle to find authenticity.
+            </p>
+
+            <p>
+              Beaders changes the narrative. We empower creators with tools to
+              scale, and give the world access to Africa&apos;s finest
+              craftsmanship.
+            </p>
           </div>
         </div>
       </section>

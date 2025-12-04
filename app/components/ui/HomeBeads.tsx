@@ -7,7 +7,7 @@ export default function HomeBeads() {
     {
       title: "Bead Makers",
       subtitle: "FOR CREATORS",
-      image: "/beads-maker.png",
+      image: "/beaders.jpeg",
       alt: "Hands holding blue and green beads",
       paragraph:
         "Showcase your work to a global audience and source quality materials easily.",
@@ -15,7 +15,7 @@ export default function HomeBeads() {
     {
       title: "Bead Lovers",
       subtitle: "FOR COLLECTORS",
-      image: "/beads-lover.jpeg",
+      image: "/beads-love.jpeg",
       alt: "Woman wearing beaded jewelry",
       paragraph:
         "Discover unique, authentic pieces that tell a story. Shop with confidence.",

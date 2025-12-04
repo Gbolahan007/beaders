@@ -1,5 +1,12 @@
 import React from "react";
-import { Mail, Instagram, Twitter, Linkedin, Zap } from "lucide-react";
+import {
+  Mail,
+  Instagram,
+  Twitter,
+  Linkedin,
+  Zap,
+  MessageCircle,
+} from "lucide-react";
 
 // Existing Colors
 const PRIMARY_COLOR = "#636b2f";
@@ -20,7 +27,7 @@ const footerLinks = [
 const Footer = () => {
   return (
     <footer
-      className="w-full text-white py-16 px-6 mt-24"
+      className="w-full text-white py-16 px-6"
       style={{ backgroundColor: PRIMARY_COLOR }}
     >
       <div className="max-w-7xl mx-auto">
@@ -69,6 +76,15 @@ const Footer = () => {
                 className={`transition-colors duration-300 hover:text-[${ACCENT_COLOR}]`}
               >
                 <Linkedin size={22} />
+              </a>
+              <a
+                href="https://wa.me/2348161554055"
+                style={{ color: TEXT_GREY }}
+                className={`transition-colors duration-300 hover:text-[${ACCENT_COLOR}]`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <MessageCircle size={22} />
               </a>
             </div>
           </div>

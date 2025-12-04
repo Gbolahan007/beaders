@@ -100,7 +100,7 @@ export default function JoinMovementHero() {
         </div>
 
         {/* Trust Indicators */}
-        <div className="mt-16 pt-12 border-t border-gray-800">
+        {/* <div className="mt-16 pt-12 border-t border-gray-800">
           <p className="text-sm text-gray-400 mb-6">
             TRUSTED BY ARTISANS WORLDWIDE
           </p>
@@ -120,7 +120,7 @@ export default function JoinMovementHero() {
               <p className="text-sm text-gray-400">Delivery Worldwide</p>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
 
       {/* Decorative Elements */}

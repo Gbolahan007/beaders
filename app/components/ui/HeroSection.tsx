@@ -18,7 +18,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 -z-10">
         {/* Mobile Image */}
         <Image
-          src="/hero-3-mobile.webp"
+          src="/hero-3.jpeg"
           alt="Hero background mobile"
           fill
           priority
@@ -27,7 +27,7 @@ const HeroSection = () => {
 
         {/* Desktop Image */}
         <Image
-          src="/hero-3.webp"
+          src="/hero-3.jpeg"
           alt="Hero background desktop"
           fill
           priority
@@ -46,10 +46,11 @@ const HeroSection = () => {
           <span>The Premier Global Bead Marketplace</span>
         </div> */}
 
-        <h1 className="mt-5 text-4xl sm:text-6xl  font-extrabold text-white leading-tight sm:leading-none">
-          Africa’s First Bead Marketplace
+        <h1 className="mt-5 text-6xl sm:text-9xl  font-extrabold text-white leading-tight sm:leading-none">
+          Africa<span className="text-[#636b2f]">’s</span> First Bead Market{" "}
+          <span className="text-[#636b2f]">place</span>
           <span
-            className={`${Playwrite.className}  block mt-2 sm:mt-3 text-xl sm:text-2xl font-black`}
+            className={`${Playwrite.className}  block mt-2 sm:mt-3 text-xl sm:text-3xl font-black`}
             style={{ color: ACCENT_COLOR }}
           >
             Built for Makers. Designed for Buyers. Powered by Community.

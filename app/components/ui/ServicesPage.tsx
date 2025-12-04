@@ -13,12 +13,12 @@ import { useState } from "react";
 const services = [
   {
     id: 1,
-    title: "Beaders Marketplace",
+    title: "Beaders",
     subtitle: "Finished Jewelry",
     description:
       "Discover curated collections of exquisite finished beaded jewelry from talented artisans. Browse unique pieces, limited editions, and seasonal collections.",
     icon: ShoppingBag,
-    image: "/beads-market.jpeg",
+    image: "/beads-making.jpeg",
   },
   {
     id: 2,
@@ -27,7 +27,7 @@ const services = [
     description:
       "Premium quality beads, findings, and tools for every project. From seed beads to gemstones, get everything you need for your creative vision.",
     icon: ShoppingBag,
-    image: "/beads-tools.jpeg",
+    image: "/martt.jpeg",
   },
   {
     id: 3,
@@ -36,7 +36,7 @@ const services = [
     description:
       "Master the art of beading with our comprehensive courses. Learn techniques from basic to advanced, from expert instructors with decades of experience.",
     icon: BookOpen,
-    image: "/beads-0.jpeg",
+    image: "/academy.jpeg",
   },
   {
     id: 4,
@@ -45,7 +45,7 @@ const services = [
     description:
       "Personalized beading services for custom creations and restoration. Transform your garments with intricate beadwork or restore your treasured pieces.",
     icon: Palette,
-    image: "/beads-custom.jpeg",
+    image: "/custom.jpeg",
   },
   {
     id: 5,
@@ -54,7 +54,7 @@ const services = [
     description:
       "Give your old beaded pieces new life. Trade in, upgrade, or refurbish your collection. Sustainable luxury for conscious collectors.",
     icon: RefreshCw,
-    image: "/beads-repair.jpeg",
+    image: "/rebur.jpeg",
   },
 ];
 

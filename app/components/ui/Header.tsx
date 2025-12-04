@@ -21,10 +21,10 @@ const Header = () => {
           <div className="flex justify-between items-center h-20">
             {/* Logo Section */}
             <Link href="#home" onClick={() => setIsMenuOpen(false)}>
-              <div className="w-36 h-36 relative">
+              <div className="w-24 h-24 relative">
                 {" "}
                 <Image
-                  src="/logo-2.png"
+                  src="/logo-1.png"
                   alt="Beaders Logo"
                   fill
                   className="object-contain"
