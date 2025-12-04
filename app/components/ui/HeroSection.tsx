@@ -115,14 +115,14 @@ const HeroSection = () => {
       {/* Background */}
       <div className="absolute inset-0 -z-10">
         <Image
-          src="/Hero-3.WEBP"
+          src="/hero-3.webp"
           alt="Hero background mobile"
           fill
           priority
           className="object-cover block md:hidden"
         />
         <Image
-          src="/Hero-3.WEBP"
+          src="/hero-3.webp"
           alt="Hero background desktop"
           fill
           priority
