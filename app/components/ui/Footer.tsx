@@ -7,6 +7,7 @@ import {
   Zap,
   MessageCircle,
 } from "lucide-react";
+import Image from "next/image";
 
 // Existing Colors
 const PRIMARY_COLOR = "#636b2f";
@@ -33,15 +34,20 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-12 border-b border-white/20 pb-12">
           {/* Brand Section */}
-          <div className="md:col-span-2 space-y-4">
-            <div className="flex items-center gap-3 mb-6">
-              <div
-                className="p-1 rounded-lg"
-                style={{ backgroundColor: ACCENT_COLOR }}
-              >
-                <Zap size={24} color={PRIMARY_COLOR} strokeWidth={2.5} />
+          <div className="md:col-span-2">
+            <div className="flex items-center mb-6">
+              <div className="relative w-20 h-20 rounded-lg border border-red-700">
+                <Image
+                  src="/logo-1.png"
+                  alt="Beaders Logo"
+                  fill
+                  className="object-contain"
+                />
               </div>
-              <h3 className="text-3xl font-extrabold tracking-wide">Beaders</h3>
+
+              <h3 className="text-3xl font-extrabold tracking-wide">
+                Beaders Africa
+              </h3>
             </div>
 
             <p
