@@ -49,11 +49,12 @@ const HeroSection = () => {
             style={{ color: ACCENT_COLOR }}
           >
             Connecting bead makers, lovers, and suppliers in a bold new digital
-            ecosystem. The future of African craftsmanship is here.
+            ecosystem. <br />
+            The future of African craftsmanship is here.
           </span>
         </h1>
 
-        <div className="mt-20 flex flex-col sm:flex-row gap-5 justify-center">
+        <div className="mt-12 flex flex-col sm:flex-row gap-5 justify-center">
           <button
             style={{ backgroundColor: PRIMARY_COLOR }}
             className="cursor-pointer text-white px-10 py-4 rounded-xl font-bold text-lg sm:text-xl transition-all duration-300 hover:opacity-90 hover:scale-[1.02] w-full sm:w-auto min-w-[200px] shadow-lg"
