@@ -1,12 +1,7 @@
-import { Playwrite_NO } from "next/font/google";
 import Image from "next/image";
 
 const PRIMARY_COLOR = "#636b2f"; // Main brand color
 const ACCENT_COLOR = "#d9b753"; // Secondary brand color
-
-const Playwrite = Playwrite_NO({
-  weight: ["300", "400"], // choose weights you want
-});
 
 const HeroSection = () => {
   return (
@@ -18,7 +13,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 -z-10">
         {/* Mobile Image */}
         <Image
-          src="/hero-3.jpeg"
+          src="/hero-3.JPEG"
           alt="Hero background mobile"
           fill
           priority
@@ -27,7 +22,7 @@ const HeroSection = () => {
 
         {/* Desktop Image */}
         <Image
-          src="/hero-3.jpeg"
+          src="/hero-3.JPEG"
           alt="Hero background desktop"
           fill
           priority
@@ -50,10 +45,11 @@ const HeroSection = () => {
           Africa<span className="text-[#636b2f]">’s</span> First Bead Market{" "}
           <span className="text-[#636b2f]">place</span>
           <span
-            className={`${Playwrite.className}  block mt-2 sm:mt-3 text-xl sm:text-3xl font-black`}
+            className={`  block mt-2 sm:mt-3 text-xl sm:text-3xl font-black`}
             style={{ color: ACCENT_COLOR }}
           >
-            Built for Makers. Designed for Buyers. Powered by Community.
+            Connecting bead makers, lovers, and suppliers in a bold new digital
+            ecosystem. The future of African craftsmanship is here.
           </span>
         </h1>
 
