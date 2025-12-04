@@ -1,11 +1,9 @@
-import React from "react";
 import {
-  Mail,
   Instagram,
-  Twitter,
   Linkedin,
-  Zap,
+  Mail,
   MessageCircle,
+  Twitter,
 } from "lucide-react";
 import Image from "next/image";
 
@@ -142,8 +140,6 @@ const Footer = () => {
 
                 <div className="text-sm space-y-1" style={{ color: TEXT_GREY }}>
                   <p>Lagos, Nigeria</p>
-                  <p>Nairobi, Kenya</p>
-                  <p>Accra, Ghana</p>
                 </div>
               </div>
             </div>
@@ -153,7 +149,8 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="mt-8 pt-4 flex flex-col sm:flex-row justify-between items-center">
           <p className="text-sm mb-2 sm:mb-0" style={{ color: TEXT_GREY }}>
-            &copy; {new Date().getFullYear()} Beaders. All rights reserved.
+            &copy; {new Date().getFullYear()} Beaders Africa. All rights
+            reserved.
           </p>
           <p className="text-sm font-medium" style={{ color: TEXT_GREY }}>
             Built with pride in Africa.
