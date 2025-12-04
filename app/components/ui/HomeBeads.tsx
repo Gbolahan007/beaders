@@ -34,8 +34,8 @@ export default function HomeBeads() {
     <main className="min-h-screen bg-[#d9b753]/20 flex flex-col">
       {/* Header */}
       <div className="py-16 px-4">
-        <h1 className="text-center text-5xl md:text-6xl font-bold text-slate-800">
-          Built For You
+        <h1 className="text-center text-xl md:text-3xl font-bold text-slate-800">
+          Built for makers, designed for lovers, powered by community
         </h1>
       </div>
 
