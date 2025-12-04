@@ -13,7 +13,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 -z-10">
         {/* Mobile Image */}
         <Image
-          src="/hero-3.JPEG"
+          src="/hero-3.WEBP"
           alt="Hero background mobile"
           fill
           priority
@@ -22,7 +22,7 @@ const HeroSection = () => {
 
         {/* Desktop Image */}
         <Image
-          src="/hero-3.JPEG"
+          src="/hero-3.WEBP"
           alt="Hero background desktop"
           fill
           priority
