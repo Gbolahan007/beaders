@@ -9,9 +9,9 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navLinks = [
-    { href: "#about", label: "About" },
-    { href: "#features", label: "Features" },
-    { href: "#contact", label: "Contact" },
+    { href: "about", label: "About" },
+    { href: "features", label: "Features" },
+    { href: "contact", label: "Contact" },
   ];
 
   return (
@@ -20,7 +20,7 @@ const Header = () => {
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
           <div className="flex justify-between items-center h-20">
             {/* Logo Section */}
-            <Link href="#home" onClick={() => setIsMenuOpen(false)}>
+            <Link href="/" onClick={() => setIsMenuOpen(false)}>
               <div className="w-24 h-24 relative">
                 {" "}
                 <Image

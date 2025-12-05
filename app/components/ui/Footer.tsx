@@ -131,13 +131,6 @@ const Footer = () => {
               </a>
 
               <div className="pt-2 space-y-2">
-                <p
-                  className="text-sm font-semibold"
-                  style={{ color: TEXT_GREY }}
-                >
-                  Regional Hubs:
-                </p>
-
                 <div className="text-sm space-y-1" style={{ color: TEXT_GREY }}>
                   <p>Lagos, Nigeria</p>
                 </div>

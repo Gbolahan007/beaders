@@ -167,16 +167,6 @@ export default function JoinMovementHero() {
               }}
             />
           </button>
-
-          <button
-            className="px-8 sm:px-10 py-4 rounded-full font-bold text-lg transition-all duration-300 border-2 group hover:scale-105"
-            style={{
-              borderColor: `${ACCENT_COLOR}60`,
-              color: "white",
-            }}
-          >
-            Learn More
-          </button>
         </div>
       </div>
     </section>

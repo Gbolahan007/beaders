@@ -27,7 +27,7 @@ const statsData = [
   {
     icon: DollarSign,
     label: "Total Revenue Generated",
-    value: "₦7M",
+    value: "₦7M+",
     description: "Successfully transformed passion into profit.",
   },
   {
@@ -103,7 +103,7 @@ const ImpactStats = () => {
               } else {
                 setCounts((prev) => {
                   const newCounts = [...prev];
-                  newCounts[i] = -1; // use original string
+                  newCounts[i] = -1;
                   return newCounts;
                 });
               }
@@ -139,7 +139,7 @@ const ImpactStats = () => {
           {statsData.map((stat, index) => {
             const Icon = stat.icon;
             const displayValue =
-              counts[index] === -1 ? stat.value : counts[index];
+              counts[index] === -1 ? stat.value : `${counts[index]}+`;
 
             return (
               <div
@@ -189,7 +189,7 @@ const ImpactStats = () => {
             >
               COMMUNITY STRENGTH
             </p>
-            <p className="text-6xl font-extrabold">148</p>
+            <p className="text-6xl font-extrabold">148+</p>
             <p className="mt-1 text-lg opacity-90">
               Active members in our fast-growing creative community
             </p>

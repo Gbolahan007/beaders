@@ -52,7 +52,7 @@ const featuresData = [
 
 const FeaturesGrid = () => {
   return (
-    <div className="py-12 px-4 sm:px-6 lg:px-8 bg-white">
+    <div className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       {/* Header */}
       <header className="mb-12 text-center">
         <h1 className="text-3xl font-bold text-gray-800">
