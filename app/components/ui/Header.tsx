@@ -56,7 +56,7 @@ const Header = () => {
             {/* Mobile Hamburger */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden p-2 rounded-lg text-white hover:bg-white/20 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-white"
+              className="md:hidden p-2 rounded-lg text-white hover:bg-white/20 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-white cursor-pointer"
               aria-label="Toggle Menu"
             >
               {isMenuOpen ? (
@@ -87,7 +87,7 @@ const Header = () => {
         <button
           onClick={() => setIsMenuOpen(false)}
           className="absolute top-6 right-6 p-2 rounded-full border-2 border-[#636b2f] text-[#636b2f] hover:bg-[#636b2f] hover:text-white transition-colors duration-200"
-          aria-label="Close Menu"
+          aria-label="Close Menu cursor-pointer"
         >
           <X size={24} />
         </button>
