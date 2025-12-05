@@ -20,17 +20,17 @@ export default function AboutPage() {
           </div>
 
           <h1
-            className="text-5xl md:text-6xl font-bold leading-tight text-balance"
+            className="text-2xl md:text-3xl font-bold leading-tight text-balance"
             style={{ color: "#636b2f" }}
           >
-            Connecting Africa&apos;s{" "}
-            <span style={{ color: "#d9b753" }}>bead artisans</span> to the world
+            Beaders is building Africa’s first beadtech marketplace — a digital
+            ecosystem connecting bead makers, bead lovers and material
+            suppliers. We empower makers with market access, training, and tools
+            to grow sustainable creative businesses.{" "}
+            <span style={{ color: "#d9b753" }}>
+              Connecting Africa’s bead artisans to the world
+            </span>
           </h1>
-
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
-            Born from a love for African artistry and a vision to empower the
-            hands that create it.
-          </p>
         </div>
       </section>
 

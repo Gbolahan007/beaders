@@ -62,7 +62,7 @@ export default function HomeBeads() {
   }, []);
 
   return (
-    <main className="min-h-screen bg-[#d9b753]/20 flex flex-col">
+    <main className="h-[7s00px] lg:min-h-screen bg-[#d9b753]/20 flex flex-col">
       {/* Header */}
       <div className="py-16 px-4">
         <h1 className="text-center text-xl md:text-3xl uppercase font-bold text-slate-800">
@@ -81,7 +81,7 @@ export default function HomeBeads() {
               key={index}
               className="relative h-[430px] rounded-3xl overflow-hidden shadow-lg group cursor-pointer transform transition hover:scale-105"
             >
-              {/* Background Image using next/image */}
+              {/* Background Image */}
               <div className="absolute inset-0">
                 <Image
                   src={category.image}
@@ -92,7 +92,7 @@ export default function HomeBeads() {
                 />
               </div>
 
-              {/* Strong black overlay */}
+              {/* Overlay */}
               <div className="absolute inset-0 bg-black/60 transition-opacity duration-500 group-hover:bg-black/40"></div>
 
               {/* Content */}
