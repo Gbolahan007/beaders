@@ -58,9 +58,6 @@ const FeaturesGrid = () => {
         <h1 className="text-3xl font-bold text-gray-800">
           Our Core Platform Features
         </h1>
-        <p className="mt-2 text-xl text-gray-500">
-          Everything you need to trade with confidence.
-        </p>
       </header>
 
       {/* Grid */}
