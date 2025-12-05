@@ -1,11 +1,7 @@
 "use client";
 
 import { ChevronRight, Sparkles } from "lucide-react";
-import { useState, useEffect, useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
+import { useState, useRef } from "react";
 
 export default function JoinMovementHero() {
   const PRIMARY_COLOR = "#636b2f";
@@ -19,60 +15,6 @@ export default function JoinMovementHero() {
   const buttonsRef = useRef<HTMLDivElement>(null);
   const blob1Ref = useRef<HTMLDivElement>(null);
   const blob2Ref = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (!sectionRef.current) return;
-
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: sectionRef.current,
-        start: "top 80%",
-        toggleActions: "play none none none",
-      },
-    });
-
-    tl.from(badgeRef.current, {
-      opacity: 0,
-      y: 30,
-      duration: 0.8,
-      ease: "power3.out",
-    })
-      .from(
-        headingRef.current,
-        { opacity: 0, y: 30, duration: 0.8, ease: "power3.out" },
-        "+=0.2"
-      )
-      .from(
-        subtitleRef.current,
-        { opacity: 0, y: 30, duration: 0.8, ease: "power3.out" },
-        "+=0.2"
-      )
-      .from(
-        buttonsRef.current,
-        { opacity: 0, y: 30, duration: 0.8, ease: "power3.out" },
-        "+=0.2"
-      );
-
-    // Continuous subtle float animation for blobs
-    if (blob1Ref.current) {
-      gsap.to(blob1Ref.current, {
-        y: "-=20",
-        repeat: -1,
-        yoyo: true,
-        duration: 3,
-        ease: "sine.inOut",
-      });
-    }
-    if (blob2Ref.current) {
-      gsap.to(blob2Ref.current, {
-        y: "+=20",
-        repeat: -1,
-        yoyo: true,
-        duration: 4,
-        ease: "sine.inOut",
-      });
-    }
-  }, []);
 
   return (
     <section
@@ -160,7 +102,7 @@ export default function JoinMovementHero() {
               />
             </span>
             <div
-              className={`absolute inset-0 transition-all duration-300`}
+              className="absolute inset-0 transition-all duration-300"
               style={{
                 background: `linear-gradient(to right, transparent, rgba(255,255,255,0.3), transparent)`,
                 opacity: isHovered ? 1 : 0,
