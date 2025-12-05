@@ -47,7 +47,7 @@ export default function AboutPage() {
               style={{ backgroundColor: "#e8e8d8" }}
             >
               <Image
-                src="/african-woman-beading-artisan-founder-portrait.jpg"
+                src="/founder.jpeg"
                 alt="Founder - The Visionary behind Beaders"
                 fill
                 priority
