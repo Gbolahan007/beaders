@@ -1,9 +1,11 @@
 "use client";
 
 import { ChevronRight, Sparkles } from "lucide-react";
+import { useRouter } from "next/navigation";
 import { useState, useRef } from "react";
 
 export default function JoinMovementHero() {
+  const router = useRouter();
   const PRIMARY_COLOR = "#636b2f";
   const ACCENT_COLOR = "#d9b753";
   const [isHovered, setIsHovered] = useState(false);
@@ -85,9 +87,10 @@ export default function JoinMovementHero() {
           className="flex flex-col sm:flex-row gap-4 justify-center items-center"
         >
           <button
+            onClick={() => router.push("waitlist")}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
-            className="group relative px-8 sm:px-10 py-4 rounded-full font-bold text-lg transition-all duration-300 overflow-hidden shadow-2xl hover:shadow-2xl hover:scale-105"
+            className="group relative px-8 sm:px-10 py-4 rounded-full font-bold text-lg transition-all duration-300 overflow-hidden shadow-2xl hover:shadow-2xl hover:scale-105 cursor-pointer"
             style={{
               backgroundColor: ACCENT_COLOR,
               color: "#1a1a1a",

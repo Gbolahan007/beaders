@@ -15,11 +15,21 @@ const ACCENT_COLOR = "#d9b753";
 const footerLinks = [
   {
     title: "Platform",
-    links: ["Our Story", "Marketplace", "For Makers", "For Suppliers"],
+    links: [
+      { name: "Our Story", url: "/our-story" },
+      { name: "Marketplace", url: "/marketplace" },
+      { name: "For Makers", url: "/makers" },
+      { name: "For Suppliers", url: "/suppliers" },
+    ],
   },
   {
     title: "Support",
-    links: ["Contact Us", "Privacy Policy", "Terms of Service", "FAQ"],
+    links: [
+      { name: "Contact Us", url: "/contact" },
+      { name: "Privacy Policy", url: "#" },
+      { name: "Terms of Service", url: "#" },
+      { name: "FAQ", url: "#" },
+    ],
   },
 ];
 
@@ -103,11 +113,11 @@ const Footer = () => {
                 {section.links.map((link, i) => (
                   <li key={i}>
                     <a
-                      href="#"
+                      href={link.url}
                       style={{ color: TEXT_GREY }}
                       className={`block text-base transition-colors duration-300 hover:text-[${ACCENT_COLOR}]`}
                     >
-                      {link}
+                      {link.name}
                     </a>
                   </li>
                 ))}
@@ -130,8 +140,8 @@ const Footer = () => {
                 hello@beaders.africa
               </a>
 
-              <div className="pt-2 space-y-2">
-                <div className="text-sm space-y-1" style={{ color: TEXT_GREY }}>
+              <div className=" space-y-2">
+                <div className="text-sm" style={{ color: TEXT_GREY }}>
                   <p>Lagos, Nigeria</p>
                 </div>
               </div>
