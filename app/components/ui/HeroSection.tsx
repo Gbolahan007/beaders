@@ -4,6 +4,7 @@ import { useRef, useEffect } from "react";
 import Image from "next/image";
 import { gsap } from "gsap";
 import { SplitText } from "gsap/SplitText";
+import { useRouter } from "next/navigation";
 
 gsap.registerPlugin(SplitText);
 
@@ -11,6 +12,7 @@ const PRIMARY_COLOR = "#636b2f";
 const ACCENT_COLOR = "#d9b753";
 
 const HeroSection = () => {
+  const router = useRouter();
   const heroRef = useRef<HTMLElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
   const subtitleRef = useRef<HTMLParagraphElement>(null);
@@ -164,6 +166,7 @@ const HeroSection = () => {
         <div className="mt-12 flex flex-col sm:flex-row gap-5 justify-center">
           <button
             ref={buttonRef}
+            onClick={() => router.push("waitlist")}
             style={{ backgroundColor: PRIMARY_COLOR }}
             className="cursor-pointer text-white px-10 py-4 rounded-xl font-bold text-lg sm:text-xl w-full sm:w-auto min-w-[200px] shadow-lg"
           >

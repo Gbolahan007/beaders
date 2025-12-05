@@ -1,7 +1,11 @@
+"use client";
+
 import Image from "next/image";
 import { Globe, Sparkles, Zap } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 export default function AboutPage() {
+  const router = useRouter();
   return (
     <main className="min-h-screen text-slate-900">
       <section className="relative py-24 text-center bg-[#f9f6e9]">
@@ -142,14 +146,15 @@ export default function AboutPage() {
             </h2>
 
             <p className="text-lg text-slate-700 leading-relaxed">
-              To democratize access to the global market for African bead
-              makers, and to provide a trusted source for authentic materials
-              and finished goods.
+              To digitize Africa’s bead economy by connecting creators and
+              buyers, enabling skills development, and building sustainable
+              income opportunities.
             </p>
 
             <div className="pt-4">
               <button
-                className="px-4 py-2 rounded-md border font-medium bg-white"
+                onClick={() => router.push("/waitlist")}
+                className="px-4 py-2 rounded-md border cursor-pointer font-medium bg-white"
                 style={{ borderColor: "#d9b753", color: "#636b2f" }}
               >
                 Join Waitlist

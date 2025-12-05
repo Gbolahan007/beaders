@@ -80,15 +80,15 @@ export default function JoinMovementHero() {
       className="relative bg-black overflow-hidden flex items-center justify-center py-10 sm:py-12"
     >
       {/* Background Blobs */}
-      <div className="absolute inset-0 opacity-20">
+      <div className="absolute inset-0">
         <div
           ref={blob1Ref}
-          className="absolute top-1/4 left-1/4 w-72 h-72 rounded-full blur-3xl"
+          className="absolute top-1/4 left-1/4 w-72 h-72 rounded-full blur-3xl opacity-20"
           style={{ backgroundColor: ACCENT_COLOR }}
         />
         <div
           ref={blob2Ref}
-          className="absolute bottom-1/4 right-1/4 w-72 h-72 rounded-full blur-3xl"
+          className="absolute bottom-1/4 right-1/4 w-72 h-72 rounded-full blur-3xl opacity-20"
           style={{ backgroundColor: PRIMARY_COLOR }}
         />
       </div>

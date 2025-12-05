@@ -75,7 +75,8 @@ export default function PlatformFeatures() {
             ref={subtitleRef}
             className="text-xl md:text-2xl lg:text-3xl text-white/90 font-light"
           >
-            Everything you need to thrive in the bead economy.
+            From creation to commerce, we give you everything you need to thrive
+            in the bead economy and trade with absolute confidence.
           </p>
         </div>
       </div>
