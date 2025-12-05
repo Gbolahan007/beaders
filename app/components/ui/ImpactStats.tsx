@@ -83,7 +83,7 @@ const ImpactStats = () => {
             statsData.forEach((stat, i) => {
               // Only count numeric values (skip "Featured" and "₦7M")
               const numericValue = parseInt(stat.value.replace(/\D/g, ""), 10);
-              if (!isNaN(numericValue) && stat.value !== "₦7M") {
+              if (!isNaN(numericValue) && !stat.value.includes("M")) {
                 gsap.to(
                   {},
                   {

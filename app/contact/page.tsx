@@ -176,7 +176,7 @@ export default function ContactPage() {
               {/* Email */}
               <div ref={addContactInfo} className="flex items-start gap-4">
                 <div
-                  className="rounded-full p-4 flex-shrink-0"
+                  className="rounded-full p-4 shrink-0"
                   style={{ backgroundColor: "#d9b753" }}
                 >
                   <Mail className="w-6 h-6" style={{ color: "#636b2f" }} />
@@ -208,7 +208,7 @@ export default function ContactPage() {
               {/* Phone */}
               <div ref={addContactInfo} className="flex items-start gap-4">
                 <div
-                  className="rounded-full p-4 flex-shrink-0"
+                  className="rounded-full p-4 shrink-0"
                   style={{ backgroundColor: "#d9b753" }}
                 >
                   <Phone className="w-6 h-6" style={{ color: "#636b2f" }} />
@@ -239,7 +239,7 @@ export default function ContactPage() {
               {/* Visit */}
               <div ref={addContactInfo} className="flex items-start gap-4">
                 <div
-                  className="rounded-full p-4 flex-shrink-0"
+                  className="rounded-full p-4 shrink-0"
                   style={{ backgroundColor: "#d9b753" }}
                 >
                   <MapPin className="w-6 h-6" style={{ color: "#636b2f" }} />

@@ -46,7 +46,7 @@ const Header = () => {
               ))}
 
               <Link
-                href="#waitlist"
+                href="waitlist"
                 className="ml-4 bg-transparent border-2 border-white/50 text-white px-7 py-3 rounded-full font-semibold text-lg hover:bg-white/20 transition-all duration-300 transform hover:scale-105"
               >
                 Join Waitlist
@@ -105,7 +105,7 @@ const Header = () => {
             </Link>
           ))}
           <Link
-            href="#waitlist"
+            href="waitlist"
             onClick={() => setIsMenuOpen(false)}
             className="w-full bg-[#636b2f] text-white py-4 px-8 rounded-full text-lg font-semibold hover:bg-[#4a5223] transition-colors duration-200 mt-8 text-center block"
           >

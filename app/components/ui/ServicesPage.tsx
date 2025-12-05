@@ -137,7 +137,7 @@ export function ServicesPage() {
 
                     {/* Overlay on hover */}
                     <div
-                      className={`absolute inset-0 bg-gradient-to-t from-[#636b2f]/20 to-transparent opacity-0 transition-opacity duration-300 ${
+                      className={`absolute inset-0 bg-linear-to-t from-[#636b2f]/20 to-transparent opacity-0 transition-opacity duration-300 ${
                         isHovered ? "opacity-100" : ""
                       }`}
                     />
