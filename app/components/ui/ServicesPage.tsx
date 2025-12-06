@@ -54,7 +54,7 @@ const services = [
       "Personalized beading services for custom creations and restoration. Transform your garments with intricate beadwork or restore your treasured pieces.",
     icon: Palette,
     image: "/custom.jpeg",
-    slug: "bespoke-beading",
+    slug: "custom-clothing-beading",
   },
   {
     id: 5,
