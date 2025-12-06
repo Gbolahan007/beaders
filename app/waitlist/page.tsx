@@ -1,13 +1,79 @@
 "use client";
 
 import { ArrowRight, ChevronDown } from "lucide-react";
+import { useActionState, useEffect, useRef } from "react";
+import { useFormStatus } from "react-dom";
+import { toast, Toaster } from "sonner";
+import { handleWaitlistSubmit } from "../data/actions";
+
+function SubmitButton() {
+  const { pending } = useFormStatus();
+
+  return (
+    <button
+      type="submit"
+      disabled={pending}
+      className="w-full font-semibold py-3.5 px-6 rounded-xl text-white transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-[1.02] flex items-center justify-center gap-2 bg-[#b89a42] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
+    >
+      {pending ? "Joining..." : "Secure My Spot"}
+      <ArrowRight
+        size={18}
+        className="group-hover:translate-x-1 transition-transform"
+      />
+    </button>
+  );
+}
+
+const initialState = {
+  success: false,
+  message: "",
+};
 
 export default function WaitlistForm() {
-  const PRIMARY_COLOR = "#636b2f"; // Dark moss green
-  const ACCENT_COLOR = "#d9b753"; // Bright gold/ochre
+  const PRIMARY_COLOR = "#636b2f";
+
+  const [state, formAction] = useActionState(
+    handleWaitlistSubmit,
+    initialState
+  );
+  const formRef = useRef<HTMLFormElement>(null);
+
+  useEffect(() => {
+    if (state.message) {
+      if (state.success) {
+        toast.success(state.message, {
+          duration: 4000,
+          style: {
+            background: "#636b2f",
+            color: "#fff",
+          },
+        });
+        formRef.current?.reset();
+      } else {
+        toast.error(state.message, {
+          duration: 4000,
+          style: {
+            background: "#EF4444",
+            color: "#fff",
+          },
+        });
+      }
+    }
+  }, [state]);
 
   return (
     <div className="min-h-screen flex items-center justify-center p-4 py-28 relative overflow-hidden">
+      <Toaster
+        position="bottom-right"
+        toastOptions={{
+          duration: 4000,
+          style: {
+            borderRadius: "8px",
+            fontSize: "14px",
+          },
+        }}
+      />
+
       {/* Decorative elements */}
 
       <div className="max-w-md w-full relative z-10">
@@ -26,44 +92,64 @@ export default function WaitlistForm() {
 
         {/* Form */}
         <div className="bg-white/90 backdrop-blur-md rounded-3xl shadow-2xl p-8 border border-gray-100">
-          <form className="space-y-5">
+          <form ref={formRef} action={formAction} className="space-y-5">
             {/* Full Name */}
             <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-2">
+              <label
+                htmlFor="fullName"
+                className="block text-sm font-semibold text-gray-700 mb-2"
+              >
                 Full Name
               </label>
               <input
                 type="text"
+                id="fullName"
+                name="fullName"
                 placeholder="Kwame Mensah"
-                className={`w-full px-4 py-3 bg-white border border-gray-300 rounded-xl text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[${ACCENT_COLOR}] focus:border-transparent transition-all`}
+                required
+                className="w-full px-4 py-3 bg-white border border-gray-300 rounded-xl text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:border-transparent transition-all"
               />
             </div>
 
             {/* Email */}
             <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-2">
+              <label
+                htmlFor="email"
+                className="block text-sm font-semibold text-gray-700 mb-2"
+              >
                 Email Address
               </label>
               <input
                 type="email"
+                id="email"
+                name="email"
                 placeholder="kwame@example.com"
-                className={`w-full px-4 py-3 bg-white border border-gray-300 rounded-xl text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[${ACCENT_COLOR}] focus:border-transparent transition-all`}
+                required
+                className="w-full px-4 py-3 bg-white border border-gray-300 rounded-xl text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:border-transparent transition-all"
               />
             </div>
 
             {/* Role Select */}
             <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-2">
+              <label
+                htmlFor="role"
+                className="block text-sm font-semibold text-gray-700 mb-2"
+              >
                 I am a...
               </label>
               <div className="relative">
-                <select className="w-full px-4 py-3 bg-white border border-gray-300 rounded-xl text-[#636b2f] appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#d9b753] focus:border-transparent transition-all">
-                  <option value="" disabled>
-                    Select your role
+                <select
+                  id="role"
+                  name="role"
+                  required
+                  className="w-full px-4 py-3 bg-white border border-gray-300 rounded-xl text-[#636b2f] appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#d9b753] focus:border-transparent transition-all"
+                >
+                  <option value="">Select your role</option>
+                  <option value="Bead Maker / Artisan">
+                    Bead Maker / Artisan
                   </option>
-                  <option value="bead-maker">Bead Maker / Artisan</option>
-                  <option value="bead-lover">Bead Lover / Buyer</option>
-                  <option value="material-supplier">Material Supplier</option>
+                  <option value="Bead Lover / Buyer">Bead Lover / Buyer</option>
+                  <option value="Material Supplier">Material Supplier</option>
                 </select>
 
                 <ChevronDown
@@ -74,16 +160,7 @@ export default function WaitlistForm() {
             </div>
 
             {/* Submit Button */}
-            <button
-              type="button"
-              className={`w-full font-semibold py-3.5 px-6 rounded-xl text-white transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-[1.02] flex items-center justify-center gap-2 bg-[#b89a42]`}
-            >
-              Secure My Spot
-              <ArrowRight
-                size={18}
-                className="group-hover:translate-x-1 transition-transform"
-              />
-            </button>
+            <SubmitButton />
           </form>
 
           {/* Footer */}
