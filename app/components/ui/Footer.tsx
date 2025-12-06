@@ -4,7 +4,6 @@ import {
   Linkedin,
   Mail,
   MessageCircle,
-  Twitter,
   X,
 } from "lucide-react";
 import Image from "next/image";
@@ -18,10 +17,10 @@ const footerLinks = [
   {
     title: "Platform",
     links: [
-      { name: "Our Story", url: "/our-story" },
-      { name: "Marketplace", url: "/marketplace" },
-      { name: "For Makers", url: "/makers" },
-      { name: "For Suppliers", url: "/suppliers" },
+      { name: "Our Story", url: "/about" },
+      { name: "Marketplace", url: "/beaders" },
+      { name: "For Makers", url: "/#makers" },
+      { name: "For Suppliers", url: "/#suppliers" },
     ],
   },
   {
