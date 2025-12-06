@@ -278,7 +278,7 @@ export default function ContactPage() {
                     <a
                       href="https://www.linkedin.com/company/beaders-africa/"
                       target="_blank"
-                      rel="noopener noreferrer" // Added for security best practice
+                      rel="noopener noreferrer"
                       className="flex items-center gap-2 hover:underline"
                       style={{ color: "#636b2f" }}
                     >
@@ -302,7 +302,6 @@ export default function ContactPage() {
                       className="flex items-center gap-2 hover:underline"
                       style={{ color: "#636b2f" }}
                     >
-                      {/* Replaced Whatsapp with MessageCircle */}
                       <MessageCircle className="w-5 h-5" /> WhatsApp
                     </a>
 
@@ -313,7 +312,6 @@ export default function ContactPage() {
                       className="flex items-center gap-2 hover:underline"
                       style={{ color: "#636b2f" }}
                     >
-                      {/* Replaced TikTok with Clapperboard */}
                       <Clapperboard className="w-5 h-5" /> TikTok
                     </a>
 
@@ -324,7 +322,6 @@ export default function ContactPage() {
                       className="flex items-center gap-2 hover:underline"
                       style={{ color: "#636b2f" }}
                     >
-                      {/* X is correct */}
                       <X className="w-5 h-5" /> X / Twitter
                     </a>
                   </div>
@@ -336,7 +333,6 @@ export default function ContactPage() {
           {/* Right Column - Form */}
           <div className="bg-white rounded-2xl shadow-lg p-8 lg:p-10">
             <form ref={formRef} action={formAction} className="space-y-6">
-              {/* Name Field */}
               <div ref={addFormElement}>
                 <label
                   htmlFor="name"

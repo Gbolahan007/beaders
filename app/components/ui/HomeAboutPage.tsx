@@ -199,8 +199,8 @@ const HomeAboutPage = () => {
               struggle to find buyers, and buyers struggle to find authenticity.
             </p>
             <p>
-              Beaders changes the narrative. We empower creators with tools to
-              scale, and give the world access to Africa&apos;s finest
+              Beaders Africa changes the narrative. We empower creators with
+              tools to scale, and give the world access to Africa&apos;s finest
               craftsmanship.
             </p>
           </div>
