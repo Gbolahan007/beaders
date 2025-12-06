@@ -1,9 +1,11 @@
 import {
+  Clapperboard,
   Instagram,
   Linkedin,
   Mail,
   MessageCircle,
   Twitter,
+  X,
 } from "lucide-react";
 import Image from "next/image";
 
@@ -68,37 +70,59 @@ const Footer = () => {
 
             {/* Social Icons */}
             <div className="flex gap-6 pt-4">
+              {/* Instagram */}
               <a
-                href="#"
+                href="https://www.instagram.com/beaders.africa"
                 style={{ color: TEXT_GREY }}
                 className={`transition-colors duration-300 hover:text-[${ACCENT_COLOR}]`}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Instagram size={22} />
               </a>
 
+              {/* X / Twitter */}
               <a
-                href="#"
+                href="https://x.com/beadersafrica"
                 style={{ color: TEXT_GREY }}
                 className={`transition-colors duration-300 hover:text-[${ACCENT_COLOR}]`}
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <Twitter size={22} />
+                <X size={22} /> {/* Using 'X' icon */}
               </a>
 
+              {/* LinkedIn */}
               <a
-                href="#"
+                href="https://www.linkedin.com/company/beaders-africa/"
                 style={{ color: TEXT_GREY }}
                 className={`transition-colors duration-300 hover:text-[${ACCENT_COLOR}]`}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Linkedin size={22} />
               </a>
+
+              {/* WhatsApp (MessageCircle) */}
               <a
-                href="https://wa.me/2348161554055"
+                href="https://wa.link/qxdfpz"
                 style={{ color: TEXT_GREY }}
                 className={`transition-colors duration-300 hover:text-[${ACCENT_COLOR}]`}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <MessageCircle size={22} />
+              </a>
+
+              {/* TikTok (Clapperboard) - THE REMAINING ICON */}
+              <a
+                href="https://www.tiktok.com/@beadersafrica"
+                style={{ color: TEXT_GREY }}
+                className={`transition-colors duration-300 hover:text-[${ACCENT_COLOR}]`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Clapperboard size={22} />
               </a>
             </div>
           </div>
@@ -132,12 +156,12 @@ const Footer = () => {
             </h4>
             <div className="space-y-4">
               <a
-                href="mailto:hello@beaders.africa"
+                href="mailto:beadersafrica@gmail.com"
                 style={{ color: TEXT_GREY }}
                 className={`flex items-center gap-3 text-base transition-colors duration-300 hover:text-[${ACCENT_COLOR}]`}
               >
                 <Mail size={18} />
-                hello@beaders.africa
+                beadersafrica@gmail.com
               </a>
 
               <div className=" space-y-2">

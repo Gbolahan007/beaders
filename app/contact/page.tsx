@@ -6,7 +6,17 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef, useActionState, useEffect } from "react";
 import { useFormStatus } from "react-dom";
 import { toast, Toaster } from "sonner";
-import { Mail, Phone, MapPin } from "lucide-react";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Users,
+  X,
+  Instagram,
+  Linkedin,
+  MessageCircle,
+  Clapperboard,
+} from "lucide-react";
 import { handleSubmit } from "../data/data-service";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -172,6 +182,7 @@ export default function ContactPage() {
             </p>
 
             {/* Contact Methods */}
+            {/* Contact Methods */}
             <div className="space-y-8">
               {/* Email */}
               <div ref={addContactInfo} className="flex items-start gap-4">
@@ -189,22 +200,14 @@ export default function ContactPage() {
                     Email Us
                   </h3>
                   <a
-                    href="mailto:hello@beaders.africa"
+                    href="mailto:beadersafrica@gmail.com"
                     className="block hover:underline"
                     style={{ color: "#636b2f" }}
                   >
-                    hello@beaders.africa
-                  </a>
-                  <a
-                    href="mailto:support@beaders.africa"
-                    className="block hover:underline"
-                    style={{ color: "#636b2f" }}
-                  >
-                    support@beaders.africa
+                    Beadersafrica@gmail.com
                   </a>
                 </div>
               </div>
-
               {/* Phone */}
               <div ref={addContactInfo} className="flex items-start gap-4">
                 <div
@@ -221,11 +224,11 @@ export default function ContactPage() {
                     Call Us
                   </h3>
                   <a
-                    href="tel:+234800BEADERS"
+                    href="tel:+2348163665229"
                     className="block hover:underline"
                     style={{ color: "#636b2f" }}
                   >
-                    +234 800 BEADERS
+                    +234 816 366 5229
                   </a>
                   <p
                     className="text-sm mt-1"
@@ -235,7 +238,6 @@ export default function ContactPage() {
                   </p>
                 </div>
               </div>
-
               {/* Visit */}
               <div ref={addContactInfo} className="flex items-start gap-4">
                 <div
@@ -252,6 +254,80 @@ export default function ContactPage() {
                     Visit Us
                   </h3>
                   <p style={{ color: "#636b2f" }}>Lagos, Nigeria</p>
+                </div>
+              </div>
+              <div ref={addContactInfo} className="flex items-start gap-4">
+                {/* Icon block */}
+                <div
+                  className="rounded-full p-4 shrink-0"
+                  style={{ backgroundColor: "#d9b753" }}
+                >
+                  <Users className="w-6 h-6" style={{ color: "#636b2f" }} />
+                </div>
+
+                {/* Social links */}
+                <div>
+                  <h3
+                    className="text-xl font-semibold mb-3"
+                    style={{ color: "#636b2f" }}
+                  >
+                    Connect With Us
+                  </h3>
+
+                  <div className="flex flex-wrap gap-4 items-center">
+                    <a
+                      href="https://www.linkedin.com/company/beaders-africa/"
+                      target="_blank"
+                      rel="noopener noreferrer" // Added for security best practice
+                      className="flex items-center gap-2 hover:underline"
+                      style={{ color: "#636b2f" }}
+                    >
+                      <Linkedin className="w-5 h-5" /> LinkedIn
+                    </a>
+
+                    <a
+                      href="https://www.instagram.com/beaders.africa?igsh=MWE2M3Z6d2VyY3M1Yg%3D%3D&utm_source=qr"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 hover:underline"
+                      style={{ color: "#636b2f" }}
+                    >
+                      <Instagram className="w-5 h-5" /> Instagram
+                    </a>
+
+                    <a
+                      href="https://wa.link/qxdfpz"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 hover:underline"
+                      style={{ color: "#636b2f" }}
+                    >
+                      {/* Replaced Whatsapp with MessageCircle */}
+                      <MessageCircle className="w-5 h-5" /> WhatsApp
+                    </a>
+
+                    <a
+                      href="https://www.tiktok.com/@beadersafrica"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 hover:underline"
+                      style={{ color: "#636b2f" }}
+                    >
+                      {/* Replaced TikTok with Clapperboard */}
+                      <Clapperboard className="w-5 h-5" /> TikTok
+                    </a>
+
+                    <a
+                      href="https://x.com/beadersafrica?s=21"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 hover:underline"
+                      style={{ color: "#636b2f" }}
+                    >
+                      {/* X is correct */}
+                      <X className="w-5 h-5" /> X / Twitter
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>

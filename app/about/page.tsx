@@ -65,8 +65,8 @@ export default function AboutPage() {
               style={{ borderTop: "4px solid #d9b753" }}
             >
               <p className="text-sm text-slate-600 italic">
-                &quot;I watched my grandmother thread stories into necklaces,
-                yet she struggled to find buyers beyond her village.&quot;
+                &quot;Bead making is not inferior to any job. When you own your
+                craft boldly, even kings and queens will look for you.&quot;
               </p>
             </div>
           </div>

@@ -8,6 +8,7 @@ import {
   ShoppingBag,
 } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -23,6 +24,7 @@ const services = [
       "Discover curated collections of exquisite finished beaded jewelry from talented artisans. Browse unique pieces, limited editions, and seasonal collections.",
     icon: ShoppingBag,
     image: "/beads-making.jpeg",
+    slug: "beaders",
   },
   {
     id: 2,
@@ -32,6 +34,7 @@ const services = [
       "Premium quality beads, findings, and tools for every project. From seed beads to gemstones, get everything you need for your creative vision.",
     icon: ShoppingBag,
     image: "/martt.jpeg",
+    slug: "material-store",
   },
   {
     id: 3,
@@ -41,6 +44,7 @@ const services = [
       "Master the art of beading with our comprehensive courses. Learn techniques from basic to advanced, from expert instructors with decades of experience.",
     icon: BookOpen,
     image: "/academy.jpeg",
+    slug: "beaders-academy",
   },
   {
     id: 4,
@@ -50,6 +54,7 @@ const services = [
       "Personalized beading services for custom creations and restoration. Transform your garments with intricate beadwork or restore your treasured pieces.",
     icon: Palette,
     image: "/custom.jpeg",
+    slug: "bespoke-beading",
   },
   {
     id: 5,
@@ -59,6 +64,7 @@ const services = [
       "Give your old beaded pieces new life. Trade in, upgrade, or refurbish your collection. Sustainable luxury for conscious collectors.",
     icon: RefreshCw,
     image: "/rebur.jpeg",
+    slug: "trade-in",
   },
 ];
 
@@ -115,9 +121,10 @@ export function ServicesPage() {
               const isHovered = hoveredId === service.id;
 
               return (
-                <div
+                <Link
                   key={service.id}
-                  className="group relative overflow-hidden rounded-lg border border-gray-200 bg-white transition-all duration-300 cursor-pointer hover:shadow-xl"
+                  href={`/services/${service.slug}`}
+                  className="group block relative overflow-hidden rounded-lg border border-gray-200 bg-white transition-all duration-300 cursor-pointer hover:shadow-xl"
                   onMouseEnter={() => setHoveredId(service.id)}
                   onMouseLeave={() => setHoveredId(null)}
                 >
@@ -128,8 +135,8 @@ export function ServicesPage() {
                       alt={service.title}
                       fill
                       sizes="(max-width: 768px) 100vw,
-           (max-width: 1024px) 50vw,
-           33vw"
+                          (max-width: 1024px) 50vw,
+                          33vw"
                       className={`object-cover transition-transform duration-500 ${
                         isHovered ? "scale-110" : "scale-100"
                       }`}
@@ -184,7 +191,7 @@ export function ServicesPage() {
                       />
                     </button>
                   </div>
-                </div>
+                </Link>
               );
             })}
           </div>
