@@ -33,14 +33,14 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Beaders Africa", url: "https://beaders.africa" }],
   openGraph: {
-    title: "Beaders Africa – Marketplace for Bead Makers & Suppliers",
+    title: "Beaders Africa – Africa’s First Bead Market place",
     description:
       "Connect with thousands of bead makers and suppliers in Africa. Explore materials, tools, and scale your bead business effortlessly.",
-    url: "https://beaders.africa",
+    url: "https://beadersafrica.com",
     siteName: "Beaders Africa",
     images: [
       {
-        url: "https://beaders.africa/og-image.png",
+        url: "/logo-1.png",
         width: 1200,
         height: 630,
         alt: "Beaders Africa Marketplace",
@@ -50,7 +50,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Beaders Africa – Marketplace for Bead Makers & Suppliers",
+    title: `Beaders Africa – Africa’s First Bead Market place
+`,
     description:
       "Connect with thousands of bead makers and suppliers in Africa. Explore materials, tools, and scale your bead business effortlessly.",
     images: ["https://beaders.africa/og-image.png"],

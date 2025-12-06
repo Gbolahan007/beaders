@@ -152,7 +152,6 @@ const HeroSection = () => {
           Africa<span className="text-[#636b2f]">’s</span> First Bead Market{" "}
           <span className="text-[#636b2f]">place</span>
         </h1>
-
         <p
           ref={subtitleRef}
           className="mt-2 sm:mt-3 text-xl sm:text-3xl font-black"
