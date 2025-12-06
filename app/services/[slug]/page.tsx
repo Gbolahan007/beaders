@@ -1,6 +1,7 @@
 import { getServicesDetail } from "@/app/_lib/data-client";
 import BackButton from "@/app/hooks/BackButton";
 import React from "react";
+import Link from "next/link";
 
 export default async function Page({
   params,
@@ -41,7 +42,7 @@ export default async function Page({
       </h2>
 
       {/* Benefits */}
-      <section className="space-y-4">
+      <section className="space-y-4 mb-10">
         <h3 className="text-xl font-bold mb-4" style={{ color: "#636b2f" }}>
           Key Benefits
         </h3>
@@ -62,6 +63,18 @@ export default async function Page({
           ))}
         </ul>
       </section>
+
+      {/* Join Waitlist Button */}
+      <div className="text-center ">
+        <Link href="/waitlist">
+          <button
+            className="px-6 py-3 rounded-xl cursor-pointer font-semibold text-white transition-colors"
+            style={{ backgroundColor: "#636b2f" }}
+          >
+            Join the Waitlist
+          </button>
+        </Link>
+      </div>
     </main>
   );
 }
