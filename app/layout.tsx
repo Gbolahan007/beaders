@@ -23,7 +23,7 @@ const geistMono = Geist_Mono({
 
 // Metadata for Beaders Africa
 export const metadata: Metadata = {
-  title: "Beaders Africa – Marketplace for Bead Makers & Suppliers",
+  title: "Beaders Africa – Africa’s First Bead Marketplace",
   description:
     "Join Africa's largest community of bead makers and suppliers. Discover unique bead materials, tools, and connect with artisans across Africa.",
   keywords: [
