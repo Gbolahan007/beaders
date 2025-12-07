@@ -3,7 +3,9 @@ import { Geist, Geist_Mono, Oswald } from "next/font/google";
 import Footer from "./components/ui/Footer";
 import Header from "./components/ui/Header";
 import "./globals.css";
+import SEO from "./components/ui/SEO";
 
+// Google Fonts
 const lato = Oswald({
   weight: ["300", "400", "700"],
   subsets: ["latin"],
@@ -19,6 +21,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+// Metadata for Beaders Africa
 export const metadata: Metadata = {
   title: "Beaders Africa – Marketplace for Bead Makers & Suppliers",
   description:
@@ -31,9 +34,9 @@ export const metadata: Metadata = {
     "African artisans",
     "craft materials",
   ],
-  authors: [{ name: "Beaders Africa", url: "https://beaders.africa" }],
+  authors: [{ name: "Beaders Africa", url: "https://beadersafrica.com" }],
   openGraph: {
-    title: "Beaders Africa – Africa’s First Bead Market place",
+    title: "Beaders Africa – Africa’s First Bead Marketplace",
     description:
       "Connect with thousands of bead makers and suppliers in Africa. Explore materials, tools, and scale your bead business effortlessly.",
     url: "https://beadersafrica.com",
@@ -50,8 +53,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `Beaders Africa – Africa’s First Bead Market place
-`,
+    title: "Beaders Africa – Africa’s First Bead Marketplace",
     description:
       "Connect with thousands of bead makers and suppliers in Africa. Explore materials, tools, and scale your bead business effortlessly.",
     images: ["https://beaders.africa/og-image.png"],
@@ -61,15 +63,33 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
+      <head>
+        <SEO />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+      </head>
       <body
         className={`${geistSans.variable} ${lato.className} ${geistMono.variable} antialiased`}
       >
         <Header />
+
         {children}
         <Footer />
       </body>
