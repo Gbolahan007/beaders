@@ -147,7 +147,7 @@ const HeroSection = () => {
       <div className="relative z-10 w-full max-w-6xl mx-auto px-5 sm:px-10 text-center pb-16 sm:pb-28">
         <h1
           ref={titleRef}
-          className="mt-12 text-6xl uppercase sm:text-8xl font-extrabold text-white leading-tight sm:leading-none"
+          className="mt-20 sm:mt-7 text-6xl uppercase sm:text-8xl font-extrabold text-white leading-tight sm:leading-none"
         >
           Africa<span className="text-[#636b2f]">’s</span> First Bead Market{" "}
           <span className="text-[#636b2f]">place</span>
