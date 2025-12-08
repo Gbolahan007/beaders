@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 
 const PRIMARY_COLOR = "#636b2f";
@@ -7,142 +5,68 @@ const ACCENT_COLOR = "#d9b753";
 
 export default function Loading() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-linear-to-br from-gray-50 to-gray-100">
+    <div className="fixed inset-0 bg-white flex items-center justify-center z-50">
       <div className="relative">
         {/* Outer rotating ring */}
         <div
-          className="absolute inset-0 rounded-full animate-spin"
+          className="w-32 h-32 rounded-full animate-spin"
           style={{
-            width: "120px",
-            height: "120px",
-            border: `3px solid transparent`,
+            border: `4px solid #f3f4f6`,
             borderTopColor: PRIMARY_COLOR,
             borderRightColor: PRIMARY_COLOR,
-            animation:
-              "spin 1.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite",
           }}
         />
 
-        {/* Middle rotating ring */}
+        {/* Inner rotating ring */}
         <div
-          className="absolute inset-0 rounded-full animate-spin"
+          className="absolute inset-0 w-32 h-32 rounded-full"
           style={{
-            width: "120px",
-            height: "120px",
-            border: `3px solid transparent`,
+            border: `4px solid transparent`,
             borderBottomColor: ACCENT_COLOR,
-            borderLeftColor: ACCENT_COLOR,
-            animation:
-              "spin 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite reverse",
+            animation: "spin 1.5s linear infinite reverse",
             margin: "8px",
           }}
         />
 
-        {/* Center pulsing circle */}
-        <div
-          className="absolute inset-0 m-auto rounded-full"
-          style={{
-            width: "40px",
-            height: "40px",
-            backgroundColor: PRIMARY_COLOR,
-            animation: "pulse 1.5s ease-in-out infinite",
-          }}
-        />
+        {/* Brand Name - Center */}
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="text-center">
+            <h1
+              className="text-xl font-bold tracking-[0.2em] animate-pulse"
+              style={{ color: PRIMARY_COLOR }}
+            >
+              BEADERS
+            </h1>
+          </div>
+        </div>
+      </div>
 
-        {/* Accent dots */}
-        {[0, 1, 2].map((i) => (
-          <div
-            key={i}
-            className="absolute rounded-full"
+      {/* Loading Dots */}
+      <div className="absolute bottom-20">
+        <div className="flex gap-1">
+          <span
+            className="w-2 h-2 rounded-full animate-bounce"
             style={{
-              width: "8px",
-              height: "8px",
-              backgroundColor: ACCENT_COLOR,
-              top: "50%",
-              left: "50%",
-              transform: `rotate(${i * 120}deg) translateY(-60px)`,
-              animation: `fade 1.5s ease-in-out ${i * 0.2}s infinite`,
+              backgroundColor: PRIMARY_COLOR,
+              animationDelay: "0ms",
             }}
           />
-        ))}
-
-        <div className="w-[120px] h-[120px]" />
+          <span
+            className="w-2 h-2 rounded-full animate-bounce"
+            style={{
+              backgroundColor: ACCENT_COLOR,
+              animationDelay: "150ms",
+            }}
+          />
+          <span
+            className="w-2 h-2 rounded-full animate-bounce"
+            style={{
+              backgroundColor: PRIMARY_COLOR,
+              animationDelay: "300ms",
+            }}
+          />
+        </div>
       </div>
-
-      {/* Loading text */}
-      <div className="absolute mt-48">
-        <p
-          className="text-lg font-medium tracking-wide"
-          style={{
-            color: PRIMARY_COLOR,
-            animation: "fadeInOut 2s ease-in-out infinite",
-          }}
-        >
-          Loading
-          <span style={{ animation: "dots 1.5s steps(4, end) infinite" }}>
-            ...
-          </span>
-        </p>
-      </div>
-
-      <style jsx>{`
-        @keyframes spin {
-          0% {
-            transform: rotate(0deg);
-          }
-          100% {
-            transform: rotate(360deg);
-          }
-        }
-
-        @keyframes pulse {
-          0%,
-          100% {
-            transform: scale(1);
-            opacity: 1;
-          }
-          50% {
-            transform: scale(1.2);
-            opacity: 0.8;
-          }
-        }
-
-        @keyframes fade {
-          0%,
-          100% {
-            opacity: 0.3;
-            transform: rotate(var(--rotation)) translateY(-60px) scale(0.8);
-          }
-          50% {
-            opacity: 1;
-            transform: rotate(var(--rotation)) translateY(-60px) scale(1);
-          }
-        }
-
-        @keyframes fadeInOut {
-          0%,
-          100% {
-            opacity: 0.6;
-          }
-          50% {
-            opacity: 1;
-          }
-        }
-
-        @keyframes dots {
-          0%,
-          20% {
-            content: ".";
-          }
-          40% {
-            content: "..";
-          }
-          60%,
-          100% {
-            content: "...";
-          }
-        }
-      `}</style>
     </div>
   );
 }
