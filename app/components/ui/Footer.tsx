@@ -18,9 +18,9 @@ const footerLinks = [
     title: "Platform",
     links: [
       { name: "Our Story", url: "/about" },
-      { name: "Marketplace", url: "/beaders" },
+      { name: "Marketplace", url: "/services/beaders" },
       { name: "For Makers", url: "/#makers" },
-      { name: "For Suppliers", url: "/#suppliers" },
+      { name: "For Suppliers", url: "/services/material-store" },
     ],
   },
   {
