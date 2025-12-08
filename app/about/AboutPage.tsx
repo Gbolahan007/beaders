@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation";
 export default function AboutPage() {
   const router = useRouter();
   return (
-    <main className="min-h-screen text-slate-900">
+    <main className="min-h-screen text-slate-900 ">
       <section className="relative py-24 text-center bg-[#f9f6e9]">
         {/* Content */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-3.5 space-y-6 relative z-10">

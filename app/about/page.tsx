@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import HomeAboutPage from "../components/ui/HomeAboutPage";
+import AboutPage from "./AboutPage";
 
 export const metadata: Metadata = {
   title:
@@ -34,5 +34,5 @@ export const metadata: Metadata = {
 };
 
 export default async function Page() {
-  return <HomeAboutPage />;
+  return <AboutPage />;
 }
