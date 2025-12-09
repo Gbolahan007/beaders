@@ -1,17 +1,18 @@
 "use client";
 
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import {
   ArrowRight,
   BookOpen,
+  Heart,
   Palette,
   RefreshCw,
   ShoppingBag,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useEffect, useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect, useRef, useState } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -65,6 +66,16 @@ const services = [
     icon: RefreshCw,
     image: "/rebur.jpeg",
     slug: "trade-in",
+  },
+  {
+    id: 6,
+    title: "Beads Lover",
+    subtitle: "FOR COLLECTORS",
+    description:
+      "Find unique, handcrafted beaded pieces from verified creators across Africa No more scrolling through random pages, no more guessing who to trust.",
+    icon: Heart,
+    image: "/beads-love.jpeg",
+    slug: "beads-lover",
   },
 ];
 
@@ -177,7 +188,7 @@ export function ServicesPage() {
                     </p>
 
                     <button
-                      className={`w-full mt-4 py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center gap-2 font-medium text-white hover:opacity-90`}
+                      className={`w-full mt-4 py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center gap-2 font-medium text-white hover:opacity-90 cursor-pointer`}
                       style={{
                         backgroundColor: isHovered ? "#636b2f" : "#d9b753",
                         color: isHovered ? "#ffffff" : "#1a1a1a",

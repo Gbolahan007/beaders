@@ -1,6 +1,5 @@
 import HeroSection from "./components/ui/HeroSection";
 import HomeAboutPage from "./components/ui/HomeAboutPage";
-import HomeBeads from "./components/ui/HomeBeads";
 import ImpactStats from "./components/ui/ImpactStats";
 import JoinMovementHero from "./components/ui/JoinMovementHero";
 import { ServicesPage } from "./components/ui/ServicesPage";
@@ -11,7 +10,7 @@ export default function Home() {
       <HeroSection />
       <HomeAboutPage />
       <ServicesPage />
-      <HomeBeads />
+      {/* <HomeBeads /> */}
       <ImpactStats />
       <JoinMovementHero />
       {/* <FeaturesGrid /> */}
