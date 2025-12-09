@@ -25,7 +25,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Beaders Africa – Africa’s First Bead Marketplace",
   description:
-    "Join Africa's largest community of bead makers and suppliers. Discover unique bead materials, tools, and connect with artisans across Africa.",
+    "Explore handcrafted jewelry, find trusted bead makers, shop bead materials, trade-in old pieces, and learn bead making—all in one seamless platform.",
   keywords: [
     "Beaders Africa",
     "bead makers",
@@ -58,6 +58,14 @@ export const metadata: Metadata = {
       "Connect with thousands of bead makers and suppliers in Africa. Explore materials, tools, and scale your bead business effortlessly.",
     images: ["https://beaders.africa/og-image.png"],
     creator: "@beadersafrica",
+  },
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png" }],
   },
 };
 
