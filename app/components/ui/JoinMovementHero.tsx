@@ -50,7 +50,7 @@ export default function JoinMovementHero() {
           }}
         >
           <Sparkles className="w-4 h-4" />
-          Limited Founding Members
+          Exclusive Founding Members
         </div>
 
         {/* Main Heading */}

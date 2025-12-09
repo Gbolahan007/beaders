@@ -3,12 +3,14 @@
 "use server";
 
 export async function handleWaitlistSubmit(prevState: any, formData: FormData) {
+  console.log(formData);
   const fullName = formData.get("fullName") as string;
   const email = formData.get("email") as string;
   const role = formData.get("role") as string;
+  const location = formData.get("location") as string;
 
   // Validate
-  if (!fullName || !email || !role) {
+  if (!fullName || !email || !role || !location) {
     return {
       success: false,
       message: "All fields are required",
@@ -36,6 +38,7 @@ export async function handleWaitlistSubmit(prevState: any, formData: FormData) {
           fullName,
           email,
           role,
+          location,
         }),
       }
     );

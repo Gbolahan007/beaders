@@ -13,7 +13,7 @@ function SubmitButton() {
     <button
       type="submit"
       disabled={pending}
-      className="w-full font-semibold py-3.5 px-6 rounded-xl text-white transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-[1.02] flex items-center justify-center gap-2 bg-[#b89a42] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
+      className="w-full font-semibold py-3.5 px-6 rounded-xl text-white transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-[1.02] flex items-center justify-center gap-2 bg-[#b89a42] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 cursor-pointer"
     >
       {pending ? "Joining..." : "Secure My Spot"}
       <ArrowRight
@@ -44,7 +44,7 @@ export default function WaitlistPage() {
         toast.success(state.message, {
           duration: 4000,
           style: {
-            background: "#636b2f",
+            background: PRIMARY_COLOR,
             color: "#fff",
           },
         });
@@ -67,14 +67,9 @@ export default function WaitlistPage() {
         position="bottom-right"
         toastOptions={{
           duration: 4000,
-          style: {
-            borderRadius: "8px",
-            fontSize: "14px",
-          },
+          style: { borderRadius: "8px", fontSize: "14px" },
         }}
       />
-
-      {/* Decorative elements */}
 
       <div className="max-w-md w-full relative z-10">
         {/* Header */}
@@ -97,7 +92,8 @@ export default function WaitlistPage() {
             <div>
               <label
                 htmlFor="fullName"
-                className="block text-sm font-semibold text-gray-700 mb-2"
+                style={{ color: PRIMARY_COLOR }}
+                className="block text-sm font-semibold mb-2"
               >
                 Full Name
               </label>
@@ -107,7 +103,11 @@ export default function WaitlistPage() {
                 name="fullName"
                 placeholder="Kwame Mensah"
                 required
-                className="w-full px-4 py-3 bg-white border border-gray-300 rounded-xl text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:border-transparent transition-all"
+                className="w-full px-4 py-3 bg-white border rounded-xl placeholder-gray-400 focus:outline-none focus:ring-2 focus:border-transparent transition-all"
+                style={{
+                  color: PRIMARY_COLOR,
+                  borderColor: PRIMARY_COLOR,
+                }}
               />
             </div>
 
@@ -115,7 +115,8 @@ export default function WaitlistPage() {
             <div>
               <label
                 htmlFor="email"
-                className="block text-sm font-semibold text-gray-700 mb-2"
+                style={{ color: PRIMARY_COLOR }}
+                className="block text-sm font-semibold mb-2"
               >
                 Email Address
               </label>
@@ -125,24 +126,34 @@ export default function WaitlistPage() {
                 name="email"
                 placeholder="kwame@example.com"
                 required
-                className="w-full px-4 py-3 bg-white border border-gray-300 rounded-xl text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:border-transparent transition-all"
+                className="w-full px-4 py-3 bg-white border rounded-xl placeholder-gray-400 focus:outline-none focus:ring-2 focus:border-transparent transition-all"
+                style={{
+                  color: PRIMARY_COLOR,
+                  borderColor: PRIMARY_COLOR,
+                }}
               />
             </div>
 
-            {/* Role Select */}
+            {/* Role */}
             <div>
               <label
                 htmlFor="role"
-                className="block text-sm font-semibold text-gray-700 mb-2"
+                style={{ color: PRIMARY_COLOR }}
+                className="block text-sm font-semibold mb-2"
               >
                 I am a...
               </label>
+
               <div className="relative">
                 <select
                   id="role"
                   name="role"
                   required
-                  className="w-full px-4 py-3 bg-white border border-gray-300 rounded-xl text-[#636b2f] appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#d9b753] focus:border-transparent transition-all"
+                  className="w-full px-4 py-3 bg-white border rounded-xl appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:border-transparent transition-all"
+                  style={{
+                    color: PRIMARY_COLOR,
+                    borderColor: PRIMARY_COLOR,
+                  }}
                 >
                   <option value="">Select your role</option>
                   <option value="Bead Maker / Artisan">
@@ -157,6 +168,29 @@ export default function WaitlistPage() {
                   size={20}
                 />
               </div>
+            </div>
+
+            {/* Location */}
+            <div>
+              <label
+                htmlFor="location"
+                style={{ color: PRIMARY_COLOR }}
+                className="block text-sm font-semibold mb-2"
+              >
+                Location
+              </label>
+              <input
+                type="text"
+                id="location"
+                name="location"
+                required
+                placeholder="City, Country"
+                className="w-full px-4 py-3 bg-white border rounded-xl placeholder-gray-400 focus:outline-none focus:ring-2 focus:border-transparent transition-all"
+                style={{
+                  color: PRIMARY_COLOR,
+                  borderColor: PRIMARY_COLOR,
+                }}
+              />
             </div>
 
             {/* Submit Button */}
