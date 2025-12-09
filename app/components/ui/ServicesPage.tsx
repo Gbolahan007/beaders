@@ -69,8 +69,8 @@ const services = [
   },
   {
     id: 6,
-    title: "Beads Lover",
-    subtitle: "FOR COLLECTORS",
+    title: "Bead Lovers",
+    subtitle: "For Shoppers & Jewelry Enthusiasts",
     description:
       "Find unique, handcrafted beaded pieces from verified creators across Africa No more scrolling through random pages, no more guessing who to trust.",
     icon: Heart,
