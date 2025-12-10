@@ -75,7 +75,7 @@ const services = [
       "Find unique, handcrafted beaded pieces from verified creators across Africa No more scrolling through random pages, no more guessing who to trust.",
     icon: Heart,
     image: "/beads-love.jpeg",
-    slug: "beads-lover",
+    slug: "bead-lovers",
   },
 ];
 
