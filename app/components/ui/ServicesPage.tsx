@@ -22,14 +22,14 @@ const services = [
     title: "Beaders",
     subtitle: "Finished Jewelry",
     description:
-      "Discover curated collections of exquisite finished beaded jewelry from talented artisans. Browse unique pieces, limited editions, and seasonal collections.",
+      "Showcase your handcrafted jewelry to thousands of ready buyers across Africa. Get visibility, build your brand, and grow your income on a marketplace designed specifically for bead makers.",
     icon: ShoppingBag,
     image: "/beads-making.jpeg",
     slug: "beaders",
   },
   {
     id: 2,
-    title: "Materials Store",
+    title: "Suppliers",
     subtitle: "Beads, Accessories & Tools",
     description:
       "Premium quality beads, findings, and tools for every project. From seed beads to gemstones, get everything you need for your creative vision.",
