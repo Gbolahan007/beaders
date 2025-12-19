@@ -4,6 +4,7 @@ import Footer from "./components/ui/Footer";
 import Header from "./components/ui/Header";
 import "./globals.css";
 import SEO from "./components/ui/SEO";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 // Google Fonts
 const lato = Oswald({
@@ -100,6 +101,8 @@ export default function RootLayout({
 
         {children}
         <Footer />
+
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID!} />
       </body>
     </html>
   );
