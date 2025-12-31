@@ -55,7 +55,7 @@ export async function handleWaitlistSubmit(prevState: any, formData: FormData) {
     if (result.success) {
       try {
         await resend.emails.send({
-          from: "Beaders Africa <onboarding@resend.dev>",
+          from: "waitlist@beadersafrica.com",
           to: email,
           subject: "You’re In 💚 Welcome to Beaders Africa",
           html: `
