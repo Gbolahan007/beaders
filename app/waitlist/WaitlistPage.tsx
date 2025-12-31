@@ -159,7 +159,10 @@ export default function WaitlistPage() {
                   <option value="Bead Maker / Artisan">
                     Bead Maker / Artisan
                   </option>
-                  <option value="Bead Lover / Buyer">Bead Lover / Buyer</option>
+                  <option value="Bead Lovers / Buyers / Learner">
+                    Bead Lovers / Buyers / Learner
+                  </option>
+
                   <option value="Material Supplier">Material Supplier</option>
                 </select>
 
