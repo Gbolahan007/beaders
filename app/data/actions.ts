@@ -80,7 +80,7 @@ export async function handleWaitlistSubmit(prevState: any, formData: FormData) {
                 <!-- Hero Image Section -->
                 <tr>
                   <td style="padding: 0 20px 30px;">
-                    <div style="background-color: #6B7B5C; border-radius: 12px; padding: 30px; text-align: center;">
+                    <div style=" text-align: center;">
                       <img src="https://beadersafrica.com/mail.jpeg" alt="Welcome to Beaders Africa" style="max-width: 100%; height: auto; border-radius: 8px;" />
                     </div>
                   </td>
@@ -127,7 +127,7 @@ export async function handleWaitlistSubmit(prevState: any, formData: FormData) {
                       We're just getting started.
                     </p>
                     
-                    <p style="font-size: 15px; line-height: 1.6; color: ##636d2f; font-style: italic; margin: 0 0 30px; font-weight: 500;">
+                    <p style="font-size: 15px; line-height: 1.6; color: #636d2f; font-style: italic; margin: 0 0 30px; font-weight: 500;">
                       <strong>P.S.</strong> Beaders Africa is being built intentionally and in phases so we can serve you well. Thank you for your patience — it will be worth it.
                     </p>
                     
